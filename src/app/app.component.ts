@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  public navToggle = true;
+
+  toggled(): boolean {
+    return this.navToggle === true
+    ? this.navToggle = false
+    : this.navToggle = true;
+  }
+
 }
