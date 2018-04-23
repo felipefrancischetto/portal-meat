@@ -11,6 +11,10 @@ import { LoadingComponent } from './shared/loading/loading.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/siderbar/sidebar.component';
 import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { MetricCardComponent } from './pages/home/metric-card/metric-card.component';
+import { DishTodayComponent } from './pages/home/dish-today/dish-today.component';
+import { NotificationCardComponent } from './pages/home/notification-card/notification-card.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +22,13 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
     LoginComponent,
     LoadingComponent,
     HeaderComponent,
+    FooterComponent,
     SidebarComponent,
     BreadcrumbComponent,
     HomeComponent,
+    MetricCardComponent,
+    DishTodayComponent,
+    NotificationCardComponent,
   ],
   imports: [
     BrowserModule,
