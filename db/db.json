@@ -1,0 +1,42 @@
+{
+  "proteinas": [
+    { "id": 1, "name": "bife acebolado" },
+    { "id": 2, "name": "file de frango" },
+    { "id": 3, "name": "file de peixe" },
+    { "id": 4, "name": "calabresa acebolada" },
+    { "id": 5, "name": "salcicha ao molho" },
+    { "id": 6, "name": "strogonoff de frago" }
+  ],
+
+  "guarnicoes": [
+    { "id": 1, "name": "arroz" },
+    { "id": 2, "name": "feijão" },
+    { "id": 3, "name": "feijão preto" },
+    { "id": 4, "name": "feijoada" },
+    { "id": 5, "name": "feijão de corda" },
+    { "id": 6, "name": "baião de dois" }
+  ],
+
+  "legumes": [
+    { "id": 1, "name": "batata doce" },
+    { "id": 2, "name": "beringela a milanesa" },
+    { "id": 3, "name": "refogado de abobrinha" },
+    { "id": 4, "name": "batata frita" },
+    { "id": 5, "name": "gilo" }
+  ],
+
+  "saladas": [
+    { "id": 1, "name": "alface" },
+    { "id": 2, "name": "tomate" },
+    { "id": 3, "name": "vinagrete" },
+    { "id": 4, "name": "couve" },
+    { "id": 5, "name": "rucula" },
+    { "id": 6, "name": "agrião" }
+  ],
+
+  "sobremesas": [
+    { "id": 1, "name": "gelatina" },
+    { "id": 2, "name": "canjica" },
+    { "id": 3, "name": "arroz doce" }
+  ]
+}

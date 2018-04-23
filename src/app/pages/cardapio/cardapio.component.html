@@ -1,0 +1,53 @@
+<app-breadcrumb></app-breadcrumb>
+<hr>
+  <!-- <pre> {{ cardapioForm.value | json }}</pre> -->
+
+  <div [formGroup]="cardapioForm" class="form-row">
+    <div class="col-2">
+
+      <div class="form-group col-md-12">
+        <label for="inputState">Proteína</label>
+        <select formControlName="proteinas" class="form-control">
+          <option *ngFor="let proteina of proteinas"
+                  [value]="proteina.nome">{{ proteina.nome }}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="inputState">Guarnição</label>
+        <select formControlName="guarnicoes" class="form-control">
+          <option *ngFor="let guarnicao of guarnicoes"
+                  [value]="guarnicao.nome">{{ guarnicao.nome }}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="inputState">Legume</label>
+        <select formControlName="legumes" class="form-control">
+          <option *ngFor="let legume of legumes"
+                  [value]="legume.nome">{{ legume.nome }}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="inputState">Salada</label>
+        <select formControlName="saladas" class="form-control">
+          <option *ngFor="let salada of saladas"
+                  [value]="salada.nome">{{ salada.nome }}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-12">
+        <label for="inputState">Sobremesa</label>
+        <select  formControlName="sobremesas" class="form-control">
+          <option *ngFor="let sobremesa of sobremesas"
+                  [value]="sobremesa.nome">{{ sobremesa.nome }}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">salvar</button>
+    </div>
+  </div>
+
+
+

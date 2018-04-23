@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { MetricCardComponent } from './pages/home/metric-card/metric-card.component';
 import { DishTodayComponent } from './pages/home/dish-today/dish-today.component';
 import { NotificationCardComponent } from './pages/home/notification-card/notification-card.component';
+import { CardapioComponent } from './pages/cardapio/cardapio.component';
+
+import { CardapioService } from './provideres/cardapio.service';
 
 @NgModule({
   declarations: [
@@ -29,12 +33,16 @@ import { NotificationCardComponent } from './pages/home/notification-card/notifi
     MetricCardComponent,
     DishTodayComponent,
     NotificationCardComponent,
+    CardapioComponent,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES),
   ],
-  providers: [],
+  providers: [CardapioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
