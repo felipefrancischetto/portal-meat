@@ -7,12 +7,13 @@ import 'rxjs/add/operator/map';
 import { API } from './../app.api';
 
 @Injectable()
-export class CardapioService {
+export class AlimentoService {
 
   constructor(private http: Http) { }
 
-  getProteinas(): Observable<any[]> {
-    return this.http.get(`${API}/proteinas`)
+  getAlimentos(): Observable<any[]> {
+    return this.http.get(`${API}/alimentos`)
       .map(res => res.json());
   }
+
 }

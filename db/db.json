@@ -1,42 +1,30 @@
 {
-  "proteinas": [
-    { "id": 1, "name": "bife acebolado" },
-    { "id": 2, "name": "file de frango" },
-    { "id": 3, "name": "file de peixe" },
-    { "id": 4, "name": "calabresa acebolada" },
-    { "id": 5, "name": "salcicha ao molho" },
-    { "id": 6, "name": "strogonoff de frago" }
-  ],
-
-  "guarnicoes": [
-    { "id": 1, "name": "arroz" },
-    { "id": 2, "name": "feijão" },
-    { "id": 3, "name": "feijão preto" },
-    { "id": 4, "name": "feijoada" },
-    { "id": 5, "name": "feijão de corda" },
-    { "id": 6, "name": "baião de dois" }
-  ],
-
-  "legumes": [
-    { "id": 1, "name": "batata doce" },
-    { "id": 2, "name": "beringela a milanesa" },
-    { "id": 3, "name": "refogado de abobrinha" },
-    { "id": 4, "name": "batata frita" },
-    { "id": 5, "name": "gilo" }
-  ],
-
-  "saladas": [
-    { "id": 1, "name": "alface" },
-    { "id": 2, "name": "tomate" },
-    { "id": 3, "name": "vinagrete" },
-    { "id": 4, "name": "couve" },
-    { "id": 5, "name": "rucula" },
-    { "id": 6, "name": "agrião" }
-  ],
-
-  "sobremesas": [
-    { "id": 1, "name": "gelatina" },
-    { "id": 2, "name": "canjica" },
-    { "id": 3, "name": "arroz doce" }
+  "alimentos": [
+    { "id": 1, "tipo": "proteina", "name": "bife acebolado" },
+    { "id": 2, "tipo": "proteina", "name": "file de frango" },
+    { "id": 3, "tipo": "proteina", "name": "file de peixe" },
+    { "id": 4, "tipo": "proteina", "name": "calabresa acebolada" },
+    { "id": 5, "tipo": "proteina", "name": "salcicha ao molho" },
+    { "id": 6, "tipo": "proteina", "name": "strogonoff de frago" },
+    { "id": 7, "tipo": "guarnicao", "name": "arroz" },
+    { "id": 8, "tipo": "guarnicao", "name": "feijão" },
+    { "id": 8, "tipo": "guarnicao", "name": "feijão preto" },
+    { "id": 9, "tipo": "guarnicao", "name": "feijoada" },
+    { "id": 10, "tipo": "guarnicao", "name": "feijão de corda" },
+    { "id": 11, "tipo": "guarnicao", "name": "baião de dois" },
+    { "id": 12, "tipo": "legume", "name": "batata doce" },
+    { "id": 13, "tipo": "legume", "name": "beringela a milanesa" },
+    { "id": 14, "tipo": "legume", "name": "refogado de abobrinha" },
+    { "id": 15, "tipo": "legume", "name": "batata frita" },
+    { "id": 16, "tipo": "legume", "name": "gilo" },
+    { "id": 1, "tipo": "salada", "name": "alface" },
+    { "id": 2, "tipo": "salada", "name": "tomate" },
+    { "id": 3, "tipo": "salada", "name": "vinagrete" },
+    { "id": 4, "tipo": "salada", "name": "couve" },
+    { "id": 5, "tipo": "salada", "name": "rucula" },
+    { "id": 6, "tipo": "salada", "name": "agrião" },
+    { "id": 1, "tipo": "sobremesa", "name": "gelatina" },
+    { "id": 2, "tipo": "sobremesa", "name": "canjica" },
+    { "id": 3, "tipo": "sobremesa", "name": "arroz doce" }
   ]
 }

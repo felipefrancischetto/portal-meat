@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -18,7 +20,7 @@ import { DishTodayComponent } from './pages/home/dish-today/dish-today.component
 import { NotificationCardComponent } from './pages/home/notification-card/notification-card.component';
 import { CardapioComponent } from './pages/cardapio/cardapio.component';
 
-import { CardapioService } from './provideres/cardapio.service';
+import { AlimentoService } from './provideres/alimento.service';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,10 @@ import { CardapioService } from './provideres/cardapio.service';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot(ROUTES),
   ],
-  providers: [CardapioService],
+  providers: [AlimentoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

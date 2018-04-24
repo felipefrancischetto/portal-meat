@@ -1,7 +1,12 @@
+import { Observable } from 'rxjs/Observable';
+
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { CardapioService } from '../../provideres/cardapio.service';
+import { Alimento } from './../../models/models';
+import { AlimentoService } from '../../provideres/alimento.service';
+
+import { FooterComponent } from './../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-cardapio',
@@ -12,28 +17,42 @@ export class CardapioComponent implements OnInit {
 
   @Input()
   public cardapioForm: FormGroup;
-
-  proteinas;
+  public proteinas: Alimento[];
+  public guarnicoes: Alimento[];
+  public legumes: Alimento[];
+  public saladas: Alimento[];
+  public sobremesas: Alimento[];
 
   constructor(
     private fb: FormBuilder,
-    private cardapioService: CardapioService,
+    private alimentoService: AlimentoService
   ) { }
 
   ngOnInit() {
     this.initForm();
-    this.cardapioService.getProteinas()
-      .subscribe(cardapio => console.log(cardapio));
+    this.getAlimentos();
   }
 
   initForm() {
     this.cardapioForm = this.fb.group({
-      proteinas: ['' , Validators.required],
-      guarnicoes: ['', Validators.required],
-      legumes: ['', Validators.required],
-      saladas: ['', Validators.required],
+      proteinas:  ['', Validators.required],
       sobremesas: ['', Validators.required],
+      guarnicoes: ['', Validators.required],
+      legumes:    ['', Validators.required],
+      saladas:    ['', Validators.required],
     });
   }
+
+  getAlimentos() {
+    this.alimentoService.getAlimentos()
+    .subscribe(alimentos => {
+      this.proteinas = alimentos.filter(alimento => alimento.tipo === 'proteina');
+      this.guarnicoes = alimentos.filter(alimento => alimento.tipo === 'guarnicao');
+      this.legumes = alimentos.filter(alimento => alimento.tipo === 'legume');
+      this.saladas = alimentos.filter(alimento => alimento.tipo === 'salada');
+      this.sobremesas = alimentos.filter(alimento => alimento.tipo === 'sobremesa');
+    });
+  }
+
 }
 
