@@ -6,6 +6,6 @@ import { CardapioComponent } from './pages/cardapio/cardapio.component';
 import { NovoComponent } from './pages/cardapio/novo/novo.component';
 
 export const ROUTES: Routes = [
-  { path: '', component: NovoComponent },
+  { path: '', component: CardapioComponent },
 ];
 
