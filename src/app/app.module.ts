@@ -19,6 +19,7 @@ import { MetricCardComponent } from './pages/home/metric-card/metric-card.compon
 import { DishTodayComponent } from './pages/home/dish-today/dish-today.component';
 import { NotificationCardComponent } from './pages/home/notification-card/notification-card.component';
 import { CardapioComponent } from './pages/cardapio/cardapio.component';
+import { NovoComponent } from './pages/cardapio/novo/novo.component';
 
 import { AlimentoService } from './provideres/alimento.service';
 
@@ -36,6 +37,7 @@ import { AlimentoService } from './provideres/alimento.service';
     DishTodayComponent,
     NotificationCardComponent,
     CardapioComponent,
+    NovoComponent,
   ],
   imports: [
     BrowserModule,
