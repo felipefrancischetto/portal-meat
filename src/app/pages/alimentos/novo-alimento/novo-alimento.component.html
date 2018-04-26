@@ -1,0 +1,29 @@
+<app-breadcrumb></app-breadcrumb>
+
+<pre>{{ novoForm.value | json }}</pre>
+
+<div class="row">
+  <div class="col-xl-3 col-sm-6 mb-3" [formGroup]="novoForm">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Nome</span>
+      </div>
+      <input type="text" class="form-control" formControlName="nome">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Tipo</label>
+      </div>
+      <select class="custom-select" formControlName="tipo">
+        <option *ngFor="let tipo of tipoAlimentos"
+                [value]="tipo">{{ tipo }}</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <button (click)="saveAlimento(novoForm.value)" type="button" class="btn btn-primary text-right">
+        Salvar
+      </button>
+    </div>
+  </div>

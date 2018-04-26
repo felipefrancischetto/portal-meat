@@ -19,6 +19,7 @@ import { AlimentoService } from './provideres/alimento.service';
 import { AlimentosComponent } from './pages/alimentos/alimentos.component';
 import { CardapioComponent } from './pages/cardapios/cardapio.component';
 import { NovoComponent } from './pages/cardapios/novo/novo.component';
+import { NovoAlimentoComponent } from './pages/alimentos/novo-alimento/novo-alimento.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NovoComponent } from './pages/cardapios/novo/novo.component';
     CardapioComponent,
     NovoComponent,
     AlimentosComponent,
+    NovoAlimentoComponent,
   ],
   imports: [
     BrowserModule,

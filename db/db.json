@@ -134,6 +134,11 @@
       "nome": "Largato ao Molho Madeira",
       "tipo": "PROTEÍNA",
       "id": 20
+    },
+    {
+      "nome": "Beterraba",
+      "tipo": "LEGUME",
+      "id": 21
     }
   ]
 }
