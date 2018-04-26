@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -27,10 +27,12 @@ export class AlimentoService {
       .catch(ErrorHandler.handleError);
   }
 
-  newAlimento(alimento: Alimento): Observable<Alimento> {
-    return this.http.post(`${API}/alimentos`, alimento)
-      .map(res => res.json())
-      .catch(ErrorHandler.handleError);
+  newAlimento(alimento): Observable<any> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(`${API}/alimentos`, JSON.stringify(alimento),
+                          new RequestOptions({ headers: headers }))
+                          .map(res => res.json());
   }
 
   removeAlimento(id: string): Observable<Alimento> {

@@ -18,3 +18,12 @@ export interface Cardapio {
   name: string;
   alimentos: Alimento[];
 }
+
+export interface Usuario {
+  id: string;
+  nome: string;
+  email: string;
+  username: string;
+  password: string;
+  tipo: string;
+}

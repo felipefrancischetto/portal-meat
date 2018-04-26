@@ -1,11 +1,16 @@
-import { Routes } from '@angular/router';
-
-import { LoginComponent } from './pages/login/login.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CardapioComponent } from './pages/cardapio/cardapio.component';
-import { NovoComponent } from './pages/cardapio/novo/novo.component';
+import { CardapioComponent } from './pages/cardapios/cardapio.component';
+import { NovoComponent } from './pages/cardapios/novo/novo.component';
+import { AlimentosComponent } from './pages/alimentos/alimentos.component';
 
 export const ROUTES: Routes = [
-  { path: '', component: CardapioComponent },
+  { path: '', component: HomeComponent  },
+  { path: 'cardapios', component: CardapioComponent },
+  { path: 'cardapios/novo', component: CardapioComponent },
+  { path: 'alimentos/novo', component: NovoComponent },
+  { path: 'alimentos', component: AlimentosComponent },
 ];
 

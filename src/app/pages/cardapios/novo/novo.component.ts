@@ -1,3 +1,4 @@
+import { AlimentoService } from './../../../provideres/alimento.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -24,6 +25,7 @@ export class NovoComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private modalService: NgbModal,
+    private alimentoService: AlimentoService,
   ) { }
 
   ngOnInit() {
@@ -35,6 +37,11 @@ export class NovoComponent implements OnInit {
       nome:  ['', Validators.required],
       tipo: ['', Validators.required],
     });
+  }
+
+  saveAlimento(alimento) {
+    this.alimentoService.newAlimento(alimento)
+      .subscribe(salvo => console.log(salvo));
   }
 
 }

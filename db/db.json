@@ -27,32 +27,32 @@
     },
     {
       "id": 7,
-      "tipo": "guarnicao",
+      "tipo": "acompanhamento",
       "name": "arroz"
     },
     {
       "id": 8,
-      "tipo": "guarnicao",
+      "tipo": "acompanhamento",
       "name": "feijão"
     },
     {
       "id": 8,
-      "tipo": "guarnicao",
+      "tipo": "acompanhamento",
       "name": "feijão preto"
     },
     {
       "id": 9,
-      "tipo": "guarnicao",
+      "tipo": "acompanhamento",
       "name": "feijoada"
     },
     {
       "id": 10,
-      "tipo": "guarnicao",
+      "tipo": "acompanhamento",
       "name": "feijão de corda"
     },
     {
       "id": 11,
-      "tipo": "guarnicao",
+      "tipo": "acompanhamento",
       "name": "baião de dois"
     },
     {
@@ -114,6 +114,26 @@
       "id": 3,
       "tipo": "sobremesa",
       "name": "arroz doce"
+    },
+    {
+      "nome": "feae",
+      "tipo": "PROTEÍNA",
+      "id": 17
+    },
+    {
+      "nome": "feae",
+      "tipo": "PROTEÍNA",
+      "id": 18
+    },
+    {
+      "nome": "repolho",
+      "tipo": "SALADA",
+      "id": 19
+    },
+    {
+      "nome": "Largato ao Molho Madeira",
+      "tipo": "PROTEÍNA",
+      "id": 20
     }
   ]
 }
