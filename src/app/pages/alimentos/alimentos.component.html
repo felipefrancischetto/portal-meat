@@ -1,0 +1,88 @@
+<app-breadcrumb title="Alimentos"></app-breadcrumb>
+
+<div class="col-xl-12 col-sm-6 mb-12">
+  <ngb-tabset [justify]="'justified'">
+
+    <ngb-tab title="Proteínas">
+      <ng-template ngbTabContent>
+        <div class="scroll list-group">
+          <a *ngFor="let proteina of proteinas"class="list-group-item d-flex justify-content-between">
+            {{ proteina?.name }}
+            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
+              <i class="fa fa-remove danger"></i>
+            </button>
+          </a>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Acompanhamentos">
+      <ng-template ngbTabContent>
+        <div class="scroll list-group">
+          <a *ngFor="let acompanhamento of acompanhamentos"class="list-group-item d-flex justify-content-between">
+            {{ acompanhamento?.name }}
+            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
+              <i class="fa fa-remove danger"></i>
+            </button>
+          </a>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Legumes">
+      <ng-template ngbTabContent>
+        <div class="scroll list-group">
+          <a *ngFor="let legume of legumes"class="list-group-item d-flex justify-content-between">
+            {{ legume?.name }}
+            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
+              <i class="fa fa-remove danger"></i>
+            </button>
+          </a>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Saladas">
+      <ng-template ngbTabContent>
+        <div class="scroll list-group">
+          <a *ngFor="let salada of saladas"class="list-group-item d-flex justify-content-between">
+            {{ salada?.name }}
+            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
+              <i class="fa fa-remove danger"></i>
+            </button>
+          </a>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Sobremesas">
+      <ng-template ngbTabContent>
+        <div class="scroll list-group">
+          <a *ngFor="let sobremesa of sobremesas"class="list-group-item d-flex justify-content-between">
+            {{ sobremesa?.name }}
+            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
+              <i class="fa fa-remove danger"></i>
+            </button>
+          </a>
+        </div>
+      </ng-template>
+    </ngb-tab>
+
+  </ngb-tabset>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Atenção</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Deseja realmente remover o item ?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Sim</button>
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Não</button>
+  </div>
+</ng-template>
