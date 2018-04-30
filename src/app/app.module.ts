@@ -23,6 +23,9 @@ import { AlimentosComponent } from './pages/alimentos/alimentos.component';
 import { CardapioComponent } from './pages/cardapios/cardapio.component';
 import { NovoAlimentoComponent } from './pages/alimentos/novo-alimento/novo-alimento.component';
 import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-cardapio.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
+import { UsuarioService } from './provideres/usuario.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,8 @@ import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-card
     AlimentosComponent,
     NovoCardapioComponent,
     NovoAlimentoComponent,
+    UsuariosComponent,
+    NovoUsuarioComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,8 @@ import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-card
   ],
   providers: [
     AlimentoService,
-    CardapioService
+    CardapioService,
+    UsuarioService,
   ],
   bootstrap: [AppComponent]
 })

@@ -404,5 +404,33 @@
       ],
       "id": 17
     }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Geralmente de Segunda",
+      "email": "felipefrancischetto@gmail.com",
+      "username": "felipefrancischetto",
+      "password": "61195344",
+      "tipo": "admin"
+    },
+    {
+      "nome": "adasdasd",
+      "email": "asdasd",
+      "username": "",
+      "password": "asdasd",
+      "confirmPassword": "asdad",
+      "tipo": "asdsad",
+      "id": 2
+    },
+    {
+      "nome": "asdsadas",
+      "email": "asdasdsa",
+      "tipo": "asdasd",
+      "username": "asdsad",
+      "password": "asdsad",
+      "confirmPassword": "asdasd",
+      "id": 3
+    }
   ]
 }

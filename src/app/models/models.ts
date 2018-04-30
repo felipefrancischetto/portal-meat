@@ -25,5 +25,6 @@ export interface Usuario {
   email: string;
   username: string;
   password: string;
+  confirmPassword: string;
   tipo: string;
 }

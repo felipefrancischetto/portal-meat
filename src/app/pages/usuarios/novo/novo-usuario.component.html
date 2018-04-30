@@ -1,0 +1,45 @@
+<app-breadcrumb titleParent="Usuarios" title="Novo"></app-breadcrumb>
+
+<!-- <pre>{{ usuarioForm.value | json }}</pre> -->
+
+  <div class="card mx-auto ">
+    <div class="card-header">Cadastrar usuário</div>
+    <div class="card-body">
+      <div [formGroup]="usuarioForm">
+        <div class="form-group">
+          <label for="exampleInputName">Nome</label>
+          <input class="form-control" formControlName="nome" type="text">
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <label for="exampleInputLastName">Usuario</label>
+              <input class="form-control" formControlName="username" type="text">
+            </div>
+            <div class="col-md-6">
+              <label for="exampleInputName">Tipo</label>
+              <input class="form-control" formControlName="tipo" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">E-mail</label>
+          <input class="form-control" formControlName="email" type="email">
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <label for="exampleInputPassword1">Senha</label>
+              <input class="form-control" formControlName="password" type="password">
+            </div>
+            <div class="col-md-6">
+              <label for="exampleConfirmPassword">Confirme sua senha</label>
+              <input class="form-control" formControlName="confirmPassword" type="password">
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-primary btn-block" (click)="saveUsuario(usuarioForm.value)">Salvar</a>
+      </div>
+    </div>
+  </div>
+
