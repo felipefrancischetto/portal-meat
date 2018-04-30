@@ -9,6 +9,7 @@ import { NovoAlimentoComponent } from './pages/alimentos/novo-alimento/novo-alim
 import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-cardapio.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
+import { HomeUserComponent } from './pages/home-user/home-user.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent  },
@@ -17,5 +18,6 @@ export const ROUTES: Routes = [
   { path: 'alimentos', component: AlimentosComponent },
   { path: 'alimentos/novo', component: NovoAlimentoComponent },
   { path: 'usuarios/novo', component: NovoUsuarioComponent },
+  { path: 'homeuser', component: HomeUserComponent },
 ];
 

@@ -26,6 +26,7 @@ import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-card
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
 import { UsuarioService } from './provideres/usuario.service';
+import { HomeUserComponent } from './pages/home-user/home-user.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { UsuarioService } from './provideres/usuario.service';
     NovoAlimentoComponent,
     UsuariosComponent,
     NovoUsuarioComponent,
+    HomeUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,98 @@
+<app-breadcrumb title="Home" titleParent="Home"></app-breadcrumb>
+
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseToggle" aria-expanded="false"
+    aria-controls="collapseToggle">
+    Outra Proteína
+  </button>
+</p>
+
+<div class="collapse" id="collapseToggle">
+  <div class="col-3">
+    <div class="input-group">
+      <select class="form-control">
+        <option *ngFor="let proteina of opcoesProteina">
+          {{ proteina }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-lg-8">
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fa fa-bar-chart"></i> Prato do dia - Segunda
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-12  my-auto">
+            <div class="h4 mb-0 text-danger">Proteína</div>
+            <div class="small text-muted pl-2">Bife Acebolado</div>
+            <hr>
+            <div class="h4 mb-0 text-primary">Acompanhamento</div>
+            <div class="small text-muted pl-2">Arroz, Feijão e Purê de batata</div>
+            <hr>
+            <div class="h4 mb-0 text-warning">Legumes</div>
+            <div class="small text-muted pl-2">Vagem, Cenoura e Brócolis</div>
+            <hr>
+            <div class="h4 mb-0 text-success">Salada</div>
+            <div class="small text-muted pl-2">Alface, Tomate, Cebola</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer small text-muted">Atualizado hoje as 14:59 PM</div>
+    </div>
+  </div>
+
+<div class="col-lg-4">
+  <div class="card mb-3">
+    <div class="card-header">
+      <i class="fa fa-bell-o"></i> Cardapios</div>
+    <div class="list-group list-group-flush small">
+      <a class="list-group-item list-group-item-action" href="#">
+        <div class="media">
+          <div class="media-body">
+            <strong>Segunda</strong> - Omelete
+            <div class="text-muted smaller">Hoje as 8:43 - 7m atrás</div>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item list-group-item-action" href="#">
+        <div class="media">
+          <div class="media-body">
+            <strong>Terça</strong> - Filé de Frango
+            <div class="text-muted smaller">Hoje as 8:43 - 7m atrás</div>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item list-group-item-action" href="#">
+        <div class="media">
+          <div class="media-body">
+            <strong>Quarta</strong> - Bife Acebolado
+            <div class="text-muted smaller">Hoje as 8:43 - 7m atrás</div>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item list-group-item-action" href="#">
+        <div class="media">
+          <div class="media-body">
+            <strong>Quinta</strong> - Macarronada
+            <div class="text-muted smaller">Hoje as 8:43 - 7m atrás</div>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item list-group-item-action" href="#">
+        <div class="media">
+          <div class="media-body">
+            <strong>Sexta</strong> - Strogonoff de Frango
+            <div class="text-muted smaller">Hoje as 8:43 - 7m atrás</div>
+          </div>
+        </div>
+      </a>
+      <div class="card-footer small text-muted">Atualizado hoje as 14:59 PM</div>
+    </div>
+
+  </div>
+</div>
