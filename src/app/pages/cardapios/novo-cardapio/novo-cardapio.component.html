@@ -1,0 +1,121 @@
+<app-breadcrumb titleParent="Cardapio" title="Novo"></app-breadcrumb>
+
+<pre> {{ cardapioForm.valid | json }} </pre>
+
+<div [formGroup]="cardapioForm" class="form-row">
+
+  <div formArrayName="proteinas" class="col-3">
+    <div class="col-12">
+      <label class="" for="inputState">Proteína</label>
+      <a class="pull-right" (click)="addAlimento('proteinas')">
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
+
+    <div class="pt-2" *ngFor="let item of cardapioForm.controls['proteinas'].controls; index as i">
+      <div>
+        <div class="input-group col-md-12" >
+          <select class="form-control" [formControlName]='i'>
+            <option *ngFor="let proteina of proteinas$ | async"
+                    [ngValue]="proteina">
+                    {{ proteina.name }}
+            </option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" (click)="removeAlimento('proteinas', i)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div formArrayName="acompanhamentos" class="col-3">
+    <div class="col-12">
+      <label class="" for="inputState">Acompanhamento</label>
+      <a class="pull-right" (click)="addAlimento('acompanhamentos')">
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
+    <div class="pt-2" *ngFor="let item of cardapioForm.controls['acompanhamentos'].controls; index as i">
+      <div>
+        <div class="input-group col-md-12" >
+          <select class="form-control" [formControlName]='i'>
+            <option *ngFor="let acompanhamento of acompanhamentos$ | async"
+                    [ngValue]="acompanhamento">
+                    {{ acompanhamento.name }}
+            </option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" (click)="removeAlimento('acompanhamentos', i)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div formArrayName="saladas" class="col-3">
+    <div class="col-12">
+      <label class="" for="inputState">Salada</label>
+      <a class="pull-right" (click)="addAlimento('saladas')">
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
+    <div class="pt-2" *ngFor="let item of cardapioForm.controls['saladas'].controls; index as i">
+      <div>
+        <div class="input-group col-md-12" >
+          <select class="form-control" [formControlName]='i'>
+            <option *ngFor="let salada of saladas$ | async"
+                    [ngValue]="salada">
+                    {{ salada.name }}
+            </option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" (click)="removeAlimento('saladas', i)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div formArrayName="sobremesas" class="col-3">
+    <div class="col-12">
+      <label class="" for="inputState">Sobremesas</label>
+      <a class="pull-right" (click)="addAlimento('sobremesas')">
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
+    <div class="pt-2" *ngFor="let item of cardapioForm.controls['sobremesas'].controls; index as i">
+      <div>
+        <div class="input-group col-md-12" >
+          <select class="form-control" [formControlName]='i'>
+            <option *ngFor="let sobremesa of sobremesas$ | async"
+                    [ngValue]="sobremesa">
+                    {{ sobremesa.name }}
+            </option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" (click)="removeAlimento('sobremesas', i)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
