@@ -27,6 +27,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
 import { UsuarioService } from './provideres/usuario.service';
 import { HomeUserComponent } from './pages/home-user/home-user.component';
+import { AuthService } from './provideres/auth.service';
 
 @NgModule({
   declarations: [
@@ -52,12 +53,12 @@ import { HomeUserComponent } from './pages/home-user/home-user.component';
     SharedModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(ROUTES),
-
   ],
   providers: [
     AlimentoService,
     CardapioService,
     UsuarioService,
+    AuthService,
   ],
   bootstrap: [AppComponent]
 })

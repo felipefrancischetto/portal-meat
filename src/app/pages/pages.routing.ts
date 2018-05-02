@@ -5,6 +5,10 @@ import { AppComponent } from '../app.component';
 
 export const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: './login/login.module.ts#LoginModule'
+  },
+  {
     path: 'pages',
     component: AppComponent,
     children: [
