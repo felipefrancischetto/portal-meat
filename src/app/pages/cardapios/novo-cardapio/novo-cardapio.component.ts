@@ -75,17 +75,20 @@ export class NovoCardapioComponent implements OnInit {
       .map(alimentos => alimentos.filter(filterAlimentoByType('sobremesa')));
   }
 
-  parseCardapio() {
-    const proteinas = this.cardapioForm.get('proteinas').value;
-    const acompanhamentos = this.cardapioForm.get('acompanhamentos').value;
-    const saladas = this.cardapioForm.get('saladas').value;
-    const sobremesas = this.cardapioForm.get('sobremesas').value;
-    this.cardapio.alimentos.push(proteinas);
+  parseCardapio(cardapio) {
+    const parse = { alimentos: [] };
+    const cardapios = [
+      ...parse.alimentos,
+      ...cardapio.proteinas,
+      ...cardapio.acompanhamentos,
+      ...cardapio.saladas,
+      ...cardapio.sobremesas,
+    ];
+    return cardapios;
   }
 
   saveCardapio(cardapio) {
-    this.parseCardapio();
-    this.cardapioService.newCardapio(cardapio)
+    this.cardapioService.newCardapio(this.parseCardapio(cardapio))
       .subscribe(cardapioSalvo => cardapioSalvo);
   }
 

@@ -28,6 +28,7 @@ import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.compone
 import { UsuarioService } from './provideres/usuario.service';
 import { HomeUserComponent } from './pages/home-user/home-user.component';
 import { AuthService } from './provideres/auth.service';
+import { AlmocoService } from './provideres/almoco.service';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { AuthService } from './provideres/auth.service';
     CardapioService,
     UsuarioService,
     AuthService,
+    AlmocoService,
   ],
   bootstrap: [AppComponent]
 })

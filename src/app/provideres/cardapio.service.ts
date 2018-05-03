@@ -27,7 +27,7 @@ export class CardapioService {
       .catch(ErrorHandler.handleError);
   }
 
-  newCardapio(cardapio: Cardapio): Observable<string> {
+  newCardapio(cardapio): Observable<string> {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post(`${API}/cardapios`, JSON.stringify(cardapio),

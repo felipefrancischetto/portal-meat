@@ -19,6 +19,16 @@ export interface Cardapio {
   alimentos: Alimento[];
 }
 
+export interface Almoco {
+  cardapiosAssociados: CardapioAssociado[];
+  funcionarios: Funcionario[];
+}
+
+export interface CardapioAssociado {
+  diaSemana: string;
+  cardapio: Cardapio[];
+}
+
 export interface Usuario {
   id: string;
   nome: string;

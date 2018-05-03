@@ -1,11 +1,10 @@
-<app-breadcrumb></app-breadcrumb>
-<hr>
+<app-breadcrumb title="Home" titleParent="Home"></app-breadcrumb>
 
 <app-metric-card></app-metric-card>
 
 <div class="row">
   <div class="col-lg-8">
-    <app-dish-today></app-dish-today>
+    <app-dish-today [cardapio]="cardapioAssociado"></app-dish-today>
   </div>
   <div class="col-lg-4">
     <app-notification-card></app-notification-card>

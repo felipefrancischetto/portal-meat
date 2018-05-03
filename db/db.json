@@ -163,170 +163,17 @@
   ],
   "cardapios": [
     {
-      "id": 1,
-      "nome": "Geralmente de Segunda",
-      "proteinas": [
-        ""
-      ],
-      "acompanhamentos": [
-        ""
-      ],
-      "legumes": [
-        ""
-      ],
-      "saladas": [
-        ""
-      ],
-      "sobremesas": [
-        ""
-      ]
-    },
-    {
-      "nome": "teste",
-      "proteinas": "file de peixe",
-      "sobremesas": "canjica",
-      "acompanhamentos": "feijão preto",
-      "legumes": "batata frita",
-      "saladas": "tomate",
-      "id": 2
-    },
-    {
-      "nome": "",
-      "proteinas": "calabresa acebolada",
-      "sobremesas": "arroz doce",
-      "acompanhamentos": "feijão preto",
-      "legumes": "batata frita",
-      "saladas": "vinagrete",
-      "id": 3
-    },
-    {
-      "nome": "",
-      "proteinas": "",
-      "sobremesas": "",
-      "acompanhamentos": "",
-      "legumes": "",
-      "saladas": "",
-      "id": 4
-    },
-    {
-      "nome": "adadss",
-      "proteinas": "file de peixe",
-      "sobremesas": "canjica",
-      "acompanhamentos": "feijão",
-      "legumes": "refogado de abobrinha",
-      "saladas": "tomate",
-      "id": 5
-    },
-    {
-      "nome": "",
-      "proteinas": "",
-      "sobremesas": "",
-      "acompanhamentos": "",
-      "legumes": "",
-      "saladas": "",
-      "id": 6
-    },
-    {
-      "nome": "asdsad",
-      "proteinas": "calabresa acebolada",
-      "sobremesas": "arroz doce",
-      "acompanhamentos": "feijão preto",
-      "legumes": "refogado de abobrinha",
-      "saladas": "vinagrete",
-      "id": 7
-    },
-    {
-      "nome": "asdsad",
-      "proteinas": "calabresa acebolada",
-      "sobremesas": "arroz doce",
-      "acompanhamentos": "feijão preto",
-      "legumes": "refogado de abobrinha",
-      "saladas": "vinagrete",
-      "id": 8
-    },
-    {
-      "nome": "asdsad",
-      "proteinas": "calabresa acebolada",
-      "sobremesas": "arroz doce",
-      "acompanhamentos": "feijão preto",
-      "legumes": "refogado de abobrinha",
-      "saladas": "vinagrete",
-      "id": 9
-    },
-    {
-      "nome": "",
-      "proteinas": "[object Object]",
-      "sobremesas": [
-        "",
-        null
-      ],
-      "acompanhamentos": [
-        "",
-        null
-      ],
-      "legumes": [
-        "",
-        null
-      ],
-      "saladas": [
-        "",
-        null
-      ],
-      "id": 10
-    },
-    {
-      "nome": "",
-      "proteinas": [
+      "id": 7,
+      "alimentos": [
         {
-          "name": "",
-          "tipo": ""
-        }
-      ],
-      "id": 11
-    },
-    {
-      "nome": "",
-      "proteinas": [
-        {
-          "name": "calabresa acebolada",
-          "tipo": ""
+          "id": 5,
+          "tipo": "proteina",
+          "name": "salcicha ao molho"
         },
-        {
-          "name": "",
-          "tipo": ""
-        }
-      ],
-      "id": 12
-    },
-    {
-      "proteinas": [
-        "[object Object]"
-      ],
-      "id": 13
-    },
-    {
-      "proteinas": [],
-      "sobremesas": [],
-      "acompanhamentos": [],
-      "saladas": [],
-      "id": 14
-    },
-    {
-      "proteinas": [
         {
           "id": 3,
           "tipo": "proteina",
           "name": "file de peixe"
-        }
-      ],
-      "sobremesas": [
-        null
-      ],
-      "acompanhamentos": [
-        {
-          "id": 11,
-          "tipo": "acompanhamento",
-          "name": "baião de dois"
         },
         {
           "id": 8,
@@ -334,81 +181,81 @@
           "name": "feijão preto"
         },
         {
-          "id": 11,
-          "tipo": "acompanhamento",
-          "name": "baião de dois"
-        }
-      ],
-      "saladas": [
-        {
-          "id": 3,
-          "tipo": "sobremesa",
-          "name": "arroz doce"
-        },
-        {
-          "id": 2,
-          "tipo": "salada",
-          "name": "tomate"
-        }
-      ],
-      "id": 15
-    },
-    {
-      "proteinas": [
-        {
-          "id": 3,
-          "tipo": "proteina",
-          "name": "file de peixe"
-        },
-        {
-          "id": 3,
-          "tipo": "proteina",
-          "name": "file de peixe"
-        }
-      ],
-      "sobremesas": [
-        null
-      ],
-      "acompanhamentos": [
-        {
-          "id": 9,
-          "tipo": "acompanhamento",
-          "name": "feijoada"
-        }
-      ],
-      "saladas": [
-        {
-          "id": 3,
-          "tipo": "sobremesa",
-          "name": "arroz doce"
-        }
-      ],
-      "id": 16
-    },
-    {
-      "proteinas": [
-        {
           "id": 4,
-          "tipo": "proteina",
-          "name": "calabresa acebolada"
+          "tipo": "salada",
+          "name": "couve"
         },
         {
           "id": 3,
-          "tipo": "proteina",
-          "name": "file de peixe"
+          "tipo": "sobremesa",
+          "name": "arroz doce"
         }
-      ],
-      "sobremesas": [
-        null
-      ],
-      "acompanhamentos": [
-        null
-      ],
-      "saladas": [
-        null
-      ],
-      "id": 17
-    }
+      ]
+    },
+    [
+      {
+        "id": 4,
+        "tipo": "proteina",
+        "name": "calabresa acebolada"
+      },
+      {
+        "id": 2,
+        "tipo": "proteina",
+        "name": "file de frango"
+      },
+      {
+        "id": 10,
+        "tipo": "acompanhamento",
+        "name": "feijão de corda"
+      },
+      {
+        "id": 7,
+        "tipo": "acompanhamento",
+        "name": "arroz"
+      },
+      {
+        "id": 5,
+        "tipo": "salada",
+        "name": "rucula"
+      },
+      {
+        "id": 3,
+        "tipo": "salada",
+        "name": "vinagrete"
+      },
+      {
+        "id": 3,
+        "tipo": "sobremesa",
+        "name": "arroz doce"
+      },
+      {
+        "id": 3,
+        "tipo": "sobremesa",
+        "name": "arroz doce"
+      }
+    ],
+    [
+      {
+        "id": 4,
+        "tipo": "proteina",
+        "name": "calabresa acebolada"
+      },
+      {
+        "id": 8,
+        "tipo": "acompanhamento",
+        "name": "feijão preto"
+      },
+      {
+        "id": 5,
+        "tipo": "salada",
+        "name": "rucula"
+      },
+      {
+        "id": 3,
+        "tipo": "sobremesa",
+        "name": "arroz doce"
+      }
+    ]
   ],
   "usuarios": [
     {
@@ -436,6 +283,85 @@
       "password": "asdsad",
       "confirmPassword": "asdasd",
       "id": 3
+    }
+  ],
+  "cardapiosAssociados": [
+    {
+      "id": 0,
+      "diaSemana": "domingo",
+      "cardapio": {
+        "nome": "Filé de Frango"
+      }
+    },
+    {
+      "id": 1,
+      "diaSemana": "segunda-feira",
+      "cardapio": {
+        "nome": "Filé de Frango"
+      }
+    },
+    {
+      "id": 2,
+      "diaSemana": "terca-feira",
+      "cardapio": {
+        "nome": "Filé de Frango"
+      }
+    },
+    {
+      "id": 3,
+      "diaSemana": "quarta-feira",
+      "cardapio": {
+        "id": 7,
+        "nome": "salcicha ao molho",
+        "alimentos": [
+          {
+            "id": 5,
+            "tipo": "proteina",
+            "name": "salcicha ao molho"
+          },
+          {
+            "id": 3,
+            "tipo": "proteina",
+            "name": "file de peixe"
+          },
+          {
+            "id": 8,
+            "tipo": "acompanhamento",
+            "name": "feijão preto"
+          },
+          {
+            "id": 4,
+            "tipo": "salada",
+            "name": "couve"
+          },
+          {
+            "id": 3,
+            "tipo": "sobremesa",
+            "name": "arroz doce"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "diaSemana": "quinta-feira",
+      "cardapio": {
+        "nome": "Filé de Frango"
+      }
+    },
+    {
+      "id": 5,
+      "diaSemana": "sexta-feira",
+      "cardapio": {
+        "nome": "Filé de Frango"
+      }
+    },
+    {
+      "id": 6,
+      "diaSemana": "sabado",
+      "cardapio": {
+        "nome": "Filé de Frango"
+      }
     }
   ]
 }
