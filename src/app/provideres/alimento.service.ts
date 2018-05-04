@@ -15,7 +15,7 @@ export class AlimentoService {
 
   constructor(private http: Http) { }
 
-  getAlimentos(): Observable<any[]> {
+  getAlimentos(): Observable<Alimento[]> {
     return this.http.get(`${API}/alimentos`)
       .map(res => res.json())
       .catch(ErrorHandler.handleError);
@@ -27,7 +27,7 @@ export class AlimentoService {
       .catch(ErrorHandler.handleError);
   }
 
-  newAlimento(alimento): Observable<any> {
+  newAlimento(alimento): Observable<Alimento> {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post(`${API}/alimentos`, JSON.stringify(alimento),

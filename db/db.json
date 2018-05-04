@@ -1,164 +1,49 @@
 {
   "alimentos": [
     {
-      "id": 2,
-      "tipo": "proteina",
-      "name": "file de frango"
-    },
-    {
-      "id": 3,
-      "tipo": "proteina",
-      "name": "file de peixe"
-    },
-    {
-      "id": 4,
-      "tipo": "proteina",
-      "name": "calabresa acebolada"
+      "id": 1,
+      "tipo": "proteína",
+      "nome": "file de frango"
     },
     {
       "id": 5,
-      "tipo": "proteina",
-      "name": "salcicha ao molho"
+      "tipo": "salada",
+      "nome": "tomate"
     },
     {
       "id": 6,
-      "tipo": "proteina",
-      "name": "strogonoff de frago"
+      "tipo": "salada",
+      "nome": "vinagrete"
     },
     {
       "id": 7,
-      "tipo": "acompanhamento",
-      "name": "arroz"
+      "tipo": "sobremesa",
+      "nome": "canjica"
     },
     {
       "id": 8,
-      "tipo": "acompanhamento",
-      "name": "feijão"
-    },
-    {
-      "id": 8,
-      "tipo": "acompanhamento",
-      "name": "feijão preto"
-    },
-    {
-      "id": 9,
-      "tipo": "acompanhamento",
-      "name": "feijoada"
-    },
-    {
-      "id": 10,
-      "tipo": "acompanhamento",
-      "name": "feijão de corda"
-    },
-    {
-      "id": 11,
-      "tipo": "acompanhamento",
-      "name": "baião de dois"
-    },
-    {
-      "id": 12,
-      "tipo": "legume",
-      "name": "batata doce"
-    },
-    {
-      "id": 13,
-      "tipo": "legume",
-      "name": "beringela a milanesa"
-    },
-    {
-      "id": 14,
-      "tipo": "legume",
-      "name": "refogado de abobrinha"
-    },
-    {
-      "id": 15,
-      "tipo": "legume",
-      "name": "batata frita"
-    },
-    {
-      "id": 16,
-      "tipo": "legume",
-      "name": "gilo"
-    },
-    {
-      "id": 2,
-      "tipo": "salada",
-      "name": "tomate"
-    },
-    {
-      "id": 3,
-      "tipo": "salada",
-      "name": "vinagrete"
-    },
-    {
-      "id": 4,
-      "tipo": "salada",
-      "name": "couve"
-    },
-    {
-      "id": 5,
-      "tipo": "salada",
-      "name": "rucula"
-    },
-    {
-      "id": 6,
-      "tipo": "salada",
-      "name": "agrião"
-    },
-    {
-      "id": 2,
       "tipo": "sobremesa",
-      "name": "canjica"
+      "nome": "arroz doce"
     },
     {
-      "id": 3,
-      "tipo": "sobremesa",
-      "name": "arroz doce"
+      "nome": "alface",
+      "tipo": "salada",
+      "id": 9
     },
     {
-      "nome": "feae",
-      "tipo": "PROTEÍNA",
-      "id": 17
+      "nome": "",
+      "tipo": "",
+      "id": 11
     },
     {
-      "nome": "feae",
-      "tipo": "PROTEÍNA",
-      "id": 18
+      "nome": "bife acebolado",
+      "tipo": "proteína",
+      "id": 12
     },
     {
-      "nome": "repolho",
-      "tipo": "SALADA",
-      "id": 19
-    },
-    {
-      "nome": "Largato ao Molho Madeira",
-      "tipo": "PROTEÍNA",
-      "id": 20
-    },
-    {
-      "nome": "Beterraba",
-      "tipo": "LEGUME",
-      "id": 21
-    },
-    {
-      "nome": "gelatina",
-      "tipo": "SOBREMESA",
-      "id": 22
-    },
-    {
-      "nome": "gelatina",
-      "tipo": "SOBREMESA",
-      "id": 23
-    },
-    {
-      "nome": "gelatina",
-      "tipo": "SOBREMESA",
-      "id": 24
-    },
-    {
-      "nome": "asdsadas",
-      "tipo": "GUARNICÃO",
-      "id": 25
+      "nome": "",
+      "tipo": "acompanhamento",
+      "id": 13
     }
   ],
   "cardapios": [

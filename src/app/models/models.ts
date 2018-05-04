@@ -9,7 +9,7 @@ export interface Funcionario {
 
 export interface Alimento {
   id: string;
-  name: string;
+  nome: string;
   tipo: string;
 }
 

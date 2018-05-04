@@ -1,74 +1,88 @@
-<app-breadcrumb title="Alimentos"></app-breadcrumb>
+<app-breadcrumb title="Alimentos" titleParent="Alimentos"></app-breadcrumb>
 
-<div class="col-xl-12 col-sm-6 mb-12">
-  <ngb-tabset [justify]="'justified'">
+<div class="row">
+  <div class="col-xl-3 col-sm-5 mb-12" [formGroup]="novoForm">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Nome</span>
+      </div>
+      <input type="text" class="form-control" formControlName="nome">
+    </div>
 
-    <ngb-tab title="Proteínas">
-      <ng-template ngbTabContent>
-        <div class="scroll list-group">
-          <a *ngFor="let proteina of proteinas"class="list-group-item d-flex justify-content-between">
-            {{ proteina?.name }}
-            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
-            </button>
-          </a>
-        </div>
-      </ng-template>
-    </ngb-tab>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text">Tipo</label>
+      </div>
+      <select class="custom-select" formControlName="tipo">
+        <option *ngFor="let tipo of tipoAlimentos"
+                [value]="tipo">{{ tipo }}</option>
+      </select>
+    </div>
 
-    <ngb-tab title="Acompanhamentos">
-      <ng-template ngbTabContent>
-        <div class="scroll list-group">
-          <a *ngFor="let acompanhamento of acompanhamentos"class="list-group-item d-flex justify-content-between">
-            {{ acompanhamento?.name }}
-            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
-            </button>
-          </a>
-        </div>
-      </ng-template>
-    </ngb-tab>
+    <div class="input-group mb-3">
+      <button (click)="saveAlimento(novoForm.value)" [disabled]="!novoForm.valid" type="button" class="btn btn-primary text-right">
+        Salvar
+      </button>
+    </div>
+  </div>
 
-    <ngb-tab title="Legumes">
-      <ng-template ngbTabContent>
-        <div class="scroll list-group">
-          <a *ngFor="let legume of legumes"class="list-group-item d-flex justify-content-between">
-            {{ legume?.name }}
-            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
-            </button>
-          </a>
-        </div>
-      </ng-template>
-    </ngb-tab>
+  <div class="col-xl-9 col-sm-7 mb-12">
+    <ngb-tabset [justify]="'justified'">
 
-    <ngb-tab title="Saladas">
-      <ng-template ngbTabContent>
-        <div class="scroll list-group">
-          <a *ngFor="let salada of saladas"class="list-group-item d-flex justify-content-between">
-            {{ salada?.name }}
-            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
-            </button>
-          </a>
-        </div>
-      </ng-template>
-    </ngb-tab>
+      <ngb-tab title="Proteínas">
+        <ng-template ngbTabContent>
+          <div class="scroll list-group">
+            <a *ngFor="let proteina of proteinas$ | async" class="list-group-item d-flex justify-content-between">
+              {{ proteina?.nome }}
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(proteina?.id)">
+                <i class="fa fa-remove danger"></i>
+              </button>
+            </a>
+          </div>
+        </ng-template>
+      </ngb-tab>
 
-    <ngb-tab title="Sobremesas">
-      <ng-template ngbTabContent>
-        <div class="scroll list-group">
-          <a *ngFor="let sobremesa of sobremesas"class="list-group-item d-flex justify-content-between">
-            {{ sobremesa?.name }}
-            <button type="button" (click)="alertConfirm(content)" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
-            </button>
-          </a>
-        </div>
-      </ng-template>
-    </ngb-tab>
+      <ngb-tab title="Acompanhamentos">
+        <ng-template ngbTabContent>
+          <div class="scroll list-group">
+            <a *ngFor="let acompanhamento of acompanhamentos$ | async" class="list-group-item d-flex justify-content-between">
+              {{ acompanhamento?.nome }}
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(acompanhamento?.id)">
+                <i class="fa fa-remove danger"></i>
+              </button>
+            </a>
+          </div>
+        </ng-template>
+      </ngb-tab>
 
-  </ngb-tabset>
+      <ngb-tab title="Saladas">
+        <ng-template ngbTabContent>
+          <div class="scroll list-group">
+            <a *ngFor="let salada of saladas$ | async" class="list-group-item d-flex justify-content-between">
+              {{ salada?.nome }}
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(salada?.id)">
+                <i class="fa fa-remove danger"></i>
+              </button>
+            </a>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="Sobremesas">
+        <ng-template ngbTabContent>
+          <div class="scroll list-group">
+            <a *ngFor="let sobremesa of sobremesas$ | async" class="list-group-item d-flex justify-content-between">
+              {{ sobremesa?.nome }}
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(sobremesa?.id)">
+                <i class="fa fa-remove danger"></i>
+              </button>
+            </a>
+          </div>
+        </ng-template>
+      </ngb-tab>
+
+    </ngb-tabset>
+  </div>
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
