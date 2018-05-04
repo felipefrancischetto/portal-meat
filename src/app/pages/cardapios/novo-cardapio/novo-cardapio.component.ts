@@ -66,7 +66,7 @@ export class NovoCardapioComponent implements OnInit {
     const filterAlimentoByType = tipo => (alimento: Alimento) => alimento.tipo === tipo;
     const alimentos$ = this.alimentoService.getAlimentos();
     this.proteinas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('proteina')));
+      .map(alimentos => alimentos.filter(filterAlimentoByType('proteína')));
     this.acompanhamentos$ = alimentos$
       .map(alimentos => alimentos.filter(filterAlimentoByType('acompanhamento')));
     this.saladas$ = alimentos$

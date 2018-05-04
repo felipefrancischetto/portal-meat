@@ -18,7 +18,7 @@
           <select class="form-control" [formControlName]='i'>
             <option *ngFor="let proteina of proteinas$ | async"
                     [ngValue]="proteina">
-                    {{ proteina.name }}
+                    {{ proteina.nome }}
             </option>
           </select>
           <div class="input-group-append">
@@ -44,7 +44,7 @@
           <select class="form-control" [formControlName]='i'>
             <option *ngFor="let acompanhamento of acompanhamentos$ | async"
                     [ngValue]="acompanhamento">
-                    {{ acompanhamento.name }}
+                    {{ acompanhamento.nome }}
             </option>
           </select>
           <div class="input-group-append">
@@ -72,7 +72,7 @@
           <select class="form-control" [formControlName]='i'>
             <option *ngFor="let salada of saladas$ | async"
                     [ngValue]="salada">
-                    {{ salada.name }}
+                    {{ salada.nome }}
             </option>
           </select>
           <div class="input-group-append">
@@ -99,7 +99,7 @@
           <select class="form-control" [formControlName]='i'>
             <option *ngFor="let sobremesa of sobremesas$ | async"
                     [ngValue]="sobremesa">
-                    {{ sobremesa.name }}
+                    {{ sobremesa.nome }}
             </option>
           </select>
           <div class="input-group-append">

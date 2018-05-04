@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MetricCardComponent } from './pages/home/metric-card/metric-card.component';
-import { DishTodayComponent } from './pages/home/dish-today/dish-today.component';
 import { NotificationCardComponent } from './pages/home/notification-card/notification-card.component';
 
 import { AlimentoService } from './provideres/alimento.service';
@@ -28,6 +27,7 @@ import { UsuarioService } from './provideres/usuario.service';
 import { HomeUserComponent } from './pages/home-user/home-user.component';
 import { AuthService } from './provideres/auth.service';
 import { AlmocoService } from './provideres/almoco.service';
+import { PratoDoDiaComponent } from './pages/home/prato-do-dia/prato-do-dia..component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { AlmocoService } from './provideres/almoco.service';
     LoginComponent,
     HomeComponent,
     MetricCardComponent,
-    DishTodayComponent,
+    PratoDoDiaComponent,
     NotificationCardComponent,
     CardapioComponent,
     AlimentosComponent,

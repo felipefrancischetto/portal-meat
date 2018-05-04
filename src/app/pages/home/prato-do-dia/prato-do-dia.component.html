@@ -1,0 +1,30 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fa fa-bar-chart"></i> Prato do dia - {{ cardapio?.diaSemana }}</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-12  my-auto">
+        <div class="h4 mb-0 text-danger">Proteina</div>
+        <div class="small text-muted pl-2" *ngFor="let proteina of cardapio?.proteinas">
+          - {{ proteina.nome }}
+        </div>
+        <hr>
+        <div class="h4 mb-0 text-primary">Acompanhamento</div>
+        <div class="small text-muted pl-2" *ngFor="let acompanhamento of cardapio?.acompanhamentos">
+          - {{ acompanhamento.nome }}
+        </div>
+        <hr>
+        <div class="h4 mb-0 text-warning">Salada</div>
+        <div class="small text-muted pl-2" *ngFor="let salada of cardapio?.saladas">
+          - {{ salada.nome }}
+        </div>
+        <hr>
+        <div class="h4 mb-0 text-success">Sobremesa</div>
+        <div class="small text-muted pl-2" *ngFor="let sobremesa of cardapio?.sobremesas" >
+          - {{ sobremesa.nome }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer small text-muted">Atualizado hoje as 14:59 PM</div>
+</div>

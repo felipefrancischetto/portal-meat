@@ -41,9 +41,14 @@
       "id": 12
     },
     {
-      "nome": "",
+      "nome": "arroz",
       "tipo": "acompanhamento",
       "id": 13
+    },
+    {
+      "nome": "feijão",
+      "tipo": "acompanhamento",
+      "id": 14
     }
   ],
   "cardapios": [
@@ -140,6 +145,50 @@
         "tipo": "sobremesa",
         "name": "arroz doce"
       }
+    ],
+    [
+      {
+        "id": 1,
+        "tipo": "proteína",
+        "nome": "file de frango"
+      },
+      {
+        "nome": "feijão",
+        "tipo": "acompanhamento",
+        "id": 14
+      },
+      {
+        "nome": "alface",
+        "tipo": "salada",
+        "id": 9
+      },
+      {
+        "id": 8,
+        "tipo": "sobremesa",
+        "nome": "arroz doce"
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "tipo": "proteína",
+        "nome": "file de frango"
+      },
+      {
+        "nome": "feijão",
+        "tipo": "acompanhamento",
+        "id": 14
+      },
+      {
+        "nome": "alface",
+        "tipo": "salada",
+        "id": 9
+      },
+      {
+        "id": 8,
+        "tipo": "sobremesa",
+        "nome": "arroz doce"
+      }
     ]
   ],
   "usuarios": [
@@ -173,28 +222,28 @@
   "cardapiosAssociados": [
     {
       "id": 0,
-      "diaSemana": "domingo",
+      "diaSemana": "Domingo",
       "cardapio": {
         "nome": "Filé de Frango"
       }
     },
     {
       "id": 1,
-      "diaSemana": "segunda-feira",
+      "diaSemana": "Segunda-Feira",
       "cardapio": {
         "nome": "Filé de Frango"
       }
     },
     {
       "id": 2,
-      "diaSemana": "terca-feira",
+      "diaSemana": "Terca-Feira",
       "cardapio": {
         "nome": "Filé de Frango"
       }
     },
     {
       "id": 3,
-      "diaSemana": "quarta-feira",
+      "diaSemana": "Quarta-Feira",
       "cardapio": {
         "id": 7,
         "nome": "salcicha ao molho",
@@ -229,21 +278,54 @@
     },
     {
       "id": 4,
-      "diaSemana": "quinta-feira",
+      "diaSemana": "Quinta-Feira",
       "cardapio": {
         "nome": "Filé de Frango"
       }
     },
     {
       "id": 5,
-      "diaSemana": "sexta-feira",
+      "diaSemana": "Sexta-Feira",
       "cardapio": {
-        "nome": "Filé de Frango"
+        "nome": "Filé de Frango",
+        "alimentos": [
+          {
+            "id": 1,
+            "tipo": "proteína",
+            "nome": "file de frango"
+          },
+
+          {
+            "id": 1,
+            "tipo": "acompanhamento",
+            "nome": "arroz"
+          },
+          {
+            "id": 5,
+            "tipo": "salada",
+            "nome": "tomate"
+          },
+          {
+            "id": 6,
+            "tipo": "salada",
+            "nome": "vinagrete"
+          },
+          {
+            "id": 7,
+            "tipo": "sobremesa",
+            "nome": "canjica"
+          },
+          {
+            "id": 8,
+            "tipo": "sobremesa",
+            "nome": "arroz doce"
+          }
+        ]
       }
     },
     {
       "id": 6,
-      "diaSemana": "sabado",
+      "diaSemana": "Sábado",
       "cardapio": {
         "nome": "Filé de Frango"
       }
