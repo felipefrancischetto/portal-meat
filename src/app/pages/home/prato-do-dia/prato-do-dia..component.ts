@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { CardapioAssociado, Alimento } from './../../../models/models';
+import { CardapioAssociado, Alimento, Cardapio } from './../../../models/models';
 
 @Component({
   selector: 'app-prato-do-dia',
@@ -11,7 +11,7 @@ import { CardapioAssociado, Alimento } from './../../../models/models';
 export class PratoDoDiaComponent implements OnInit {
 
   @Input()
-  cardapio: any;
+  cardapio: Cardapio;
 
   ngOnInit() {
   }

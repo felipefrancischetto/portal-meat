@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions, Headers } from '@angular/http';
-
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -13,33 +12,22 @@ import { ErrorHandler } from '../app.error-hander';
 @Injectable()
 export class CardapioService {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   getCardapios(): Observable<Cardapio[]> {
-    return this.http.get(`${API}/cardapios`)
-      .map(res => res.json())
-      .catch(ErrorHandler.handleError);
+    return this.http.get<Cardapio[]>(`${API}/cardapios`);
   }
 
   cardapioById(id: string): Observable<Cardapio[]> {
-    return this.http.get(`${API}/cardapios${id}`)
-      .map(res => res.json())
-      .catch(ErrorHandler.handleError);
+    return this.http.get<Cardapio[]>(`${API}/cardapios${id}`);
   }
 
-  newCardapio(cardapio): Observable<string> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post(`${API}/cardapios`, JSON.stringify(cardapio),
-                          new RequestOptions({ headers: headers }))
-                          .map(res => res.json())
-                          .catch(ErrorHandler.handleError);
+  newCardapio(cardapio: Cardapio): Observable<string> {
+    return this.http.post<any>(`${API}/cardapios`, cardapio);
   }
 
   removeCardapio(id: string): Observable<Cardapio> {
-    return this.http.delete(`${API}/cardapios/${id}`)
-      .map(res => res.json()
-      .catch(ErrorHandler.handleError));
+    return this.http.delete<Cardapio>(`${API}/cardapios/${id}`);
   }
 }
 

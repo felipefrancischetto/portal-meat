@@ -20,12 +20,12 @@ import { TIPO_ALIMENTOS } from './../../../shared/mocks/tipo-alimentos';
 export class NovoCardapioComponent implements OnInit {
 
   @Input()
-  public cardapioForm: FormGroup;
-  public proteinas$: Observable<Alimento[]>;
+  public cardapioForm:     FormGroup;
+  public cardapio:         Cardapio;
+  public proteinas$:       Observable<Alimento[]>;
   public acompanhamentos$: Observable<Alimento[]>;
-  public saladas$: Observable<Alimento[]>;
-  public sobremesas$: Observable<Alimento[]>;
-  public cardapio: Cardapio;
+  public saladas$:         Observable<Alimento[]>;
+  public sobremesas$:      Observable<Alimento[]>;
 
   constructor(
     private fb: FormBuilder,
@@ -76,20 +76,21 @@ export class NovoCardapioComponent implements OnInit {
   }
 
   parseCardapio(cardapio) {
-    const parse = { alimentos: [] };
-    const cardapios = [
-      ...parse.alimentos,
-      ...cardapio.proteinas,
-      ...cardapio.acompanhamentos,
-      ...cardapio.saladas,
-      ...cardapio.sobremesas,
-    ];
+    const cardapios = {
+      nome: cardapio.proteinas[0].nome,
+      alimentos: [
+        ...cardapio.proteinas,
+        ...cardapio.acompanhamentos,
+        ...cardapio.saladas,
+        ...cardapio.sobremesas,
+      ]
+    };
     return cardapios;
   }
 
-  saveCardapio(cardapio) {
-    this.cardapioService.newCardapio(this.parseCardapio(cardapio))
-      .subscribe(cardapioSalvo => cardapioSalvo);
+  saveCardapio(cardapio: Cardapio) {
+    console.log(this.parseCardapio(cardapio));
+    this.cardapioService.newCardapio(this.parseCardapio(cardapio));
   }
 
 }

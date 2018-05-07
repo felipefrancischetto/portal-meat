@@ -10,6 +10,7 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
 import { HomeUserComponent } from './pages/home-user/home-user.component';
 import { LoginComponent } from './pages/login/login.component';
+import { GerenciarUsuarioComponent } from './pages/usuarios/gerenciar/gerenciar-usuario.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent  },
@@ -18,6 +19,7 @@ export const ROUTES: Routes = [
   { path: 'alimentos', component: AlimentosComponent },
   { path: 'alimentos/novo', component: AlimentosComponent },
   { path: 'usuarios/novo', component: NovoUsuarioComponent },
+  { path: 'usuarios/gerenciar', component: GerenciarUsuarioComponent },
   { path: 'homeuser', component: HomeUserComponent },
   { path: 'login', component: LoginComponent },
 ];

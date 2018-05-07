@@ -14,8 +14,8 @@ export interface Alimento {
 }
 
 export interface Cardapio {
-  id: string;
-  name: string;
+  id?: string;
+  nome?: string;
   alimentos: Alimento[];
 }
 
@@ -28,7 +28,9 @@ export interface Almoco {
 export interface Alteracao {
   id: string;
   funcionario: Funcionario;
-  opcao: string;
+  tipo: string;
+  opcao?: string;
+  data: Date;
 }
 
 export interface CardapioAssociado {
@@ -44,4 +46,5 @@ export interface Usuario {
   password: string;
   confirmPassword: string;
   tipo: string;
+  estado: string;
 }

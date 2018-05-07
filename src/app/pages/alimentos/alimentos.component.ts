@@ -5,8 +5,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { TIPO_ALIMENTOS } from './../../shared/mocks/tipo-alimentos';
 
-import { AlimentoService } from '../../provideres/alimento.service';
 import { Alimento } from './../../models/models';
+import { AlimentoService } from '../../provideres/alimento.service';
 
 @Component({
   selector: 'app-alimentos',

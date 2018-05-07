@@ -189,7 +189,20 @@
         "tipo": "sobremesa",
         "nome": "arroz doce"
       }
-    ]
+    ],
+    {
+      "alimentos": [
+        {
+          "nome": "bife acebolado",
+          "tipo": "proteína",
+          "id": 12
+        },
+        null,
+        null,
+        null
+      ],
+      "id": 8
+    }
   ],
   "usuarios": [
     {
@@ -217,6 +230,60 @@
       "password": "asdsad",
       "confirmPassword": "asdasd",
       "id": 3
+    },
+    {
+      "nome": "Felipe ",
+      "email": "felipe@gmail.com",
+      "tipo": "comum",
+      "username": "felipematteus",
+      "password": "123",
+      "estado": "ativo",
+      "confirmPassword": "123",
+      "id": 4
+    },
+    {
+      "nome": "alexandre ",
+      "email": "alexandre@gmail.com",
+      "tipo": "comum",
+      "username": "alexandre",
+      "password": "123",
+      "estado": "inativo",
+      "confirmPassword": "123",
+      "id": 4
+    }
+  ],
+  "alteracoes": [
+    {
+      "id": 1,
+      "funcionario": {
+        "nome": "alexandre ",
+        "email": "alexandre@gmail.com",
+        "tipo": "comum",
+        "username": "alexandre",
+        "password": "123",
+        "estado": "inativo",
+        "confirmPassword": "123",
+        "id": 4
+      },
+      "tipo": "outra proteína",
+      "opcao": null,
+      "data": "Mon May 07 2018 13:45:53 GMT-0300 (-03)"
+    },
+    {
+      "id": 1,
+      "funcionario": {
+        "nome": "alexandre ",
+        "email": "alexandre@gmail.com",
+        "tipo": "comum",
+        "username": "alexandre",
+        "password": "123",
+        "estado": "inativo",
+        "confirmPassword": "123",
+        "id": 4
+      },
+      "tipo": "outra proteína",
+      "opcao": null,
+      "data": "Mon May 06 2018 13:45:53 GMT-0300 (-03)"
     }
   ],
   "cardapiosAssociados": [

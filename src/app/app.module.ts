@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, RouterLink } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -12,7 +12,6 @@ import { ROUTES } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { MetricCardComponent } from './pages/home/metric-card/metric-card.component';
 import { NotificationCardComponent } from './pages/home/notification-card/notification-card.component';
 
 import { AlimentoService } from './provideres/alimento.service';
@@ -28,13 +27,15 @@ import { HomeUserComponent } from './pages/home-user/home-user.component';
 import { AuthService } from './provideres/auth.service';
 import { AlmocoService } from './provideres/almoco.service';
 import { PratoDoDiaComponent } from './pages/home/prato-do-dia/prato-do-dia..component';
+import { GerenciarUsuarioComponent } from './pages/usuarios/gerenciar/gerenciar-usuario.component';
+import { MetricasCardComponent } from './pages/home/metricas-card/metricas-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    MetricCardComponent,
+    MetricasCardComponent,
     PratoDoDiaComponent,
     NotificationCardComponent,
     CardapioComponent,
@@ -43,10 +44,11 @@ import { PratoDoDiaComponent } from './pages/home/prato-do-dia/prato-do-dia..com
     UsuariosComponent,
     NovoUsuarioComponent,
     HomeUserComponent,
+    GerenciarUsuarioComponent,
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
