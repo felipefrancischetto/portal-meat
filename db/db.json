@@ -1,11 +1,6 @@
 {
   "alimentos": [
     {
-      "id": 1,
-      "tipo": "proteína",
-      "nome": "file de frango"
-    },
-    {
       "id": 5,
       "tipo": "salada",
       "nome": "tomate"
@@ -49,6 +44,11 @@
       "nome": "feijão",
       "tipo": "acompanhamento",
       "id": 14
+    },
+    {
+      "nome": "filé de frango",
+      "tipo": "proteína",
+      "id": 15
     }
   ],
   "cardapios": [
@@ -231,7 +231,39 @@
       "id": 1,
       "diaSemana": "Segunda-Feira",
       "cardapio": {
-        "nome": "Filé de Frango"
+        "nome": "Filé de Frango",
+        "alimentos": [
+          {
+            "id": 1,
+            "tipo": "proteína",
+            "nome": "file de frango"
+          },
+          {
+            "id": 1,
+            "tipo": "acompanhamento",
+            "nome": "arroz"
+          },
+          {
+            "id": 5,
+            "tipo": "salada",
+            "nome": "tomate"
+          },
+          {
+            "id": 6,
+            "tipo": "salada",
+            "nome": "vinagrete"
+          },
+          {
+            "id": 7,
+            "tipo": "sobremesa",
+            "nome": "canjica"
+          },
+          {
+            "id": 8,
+            "tipo": "sobremesa",
+            "nome": "arroz doce"
+          }
+        ]
       }
     },
     {
@@ -294,7 +326,6 @@
             "tipo": "proteína",
             "nome": "file de frango"
           },
-
           {
             "id": 1,
             "tipo": "acompanhamento",

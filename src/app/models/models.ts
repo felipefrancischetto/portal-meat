@@ -20,8 +20,15 @@ export interface Cardapio {
 }
 
 export interface Almoco {
-  cardapiosAssociados: CardapioAssociado[];
+  cardapios_associados: CardapioAssociado[];
   funcionarios: Funcionario[];
+  alteracoes: Alteracao[];
+}
+
+export interface Alteracao {
+  id: string;
+  funcionario: Funcionario;
+  opcao: string;
 }
 
 export interface CardapioAssociado {

@@ -15,6 +15,12 @@ import { ErrorHandler } from './../app.error-hander';
 export class AlmocoService {
   constructor(private http: Http) { }
 
+  getAlmocos(): Observable<any[]> {
+    return this.http.get(`${API}/almocos`)
+      .map(res => res.json())
+      .catch(ErrorHandler.handleError);
+  }
+
   getCardapiosAssociados(): Observable<any[]> {
     return this.http.get(`${API}/cardapiosAssociados`)
       .map(res => res.json())

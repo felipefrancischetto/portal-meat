@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-  <a class="navbar-brand" [routerLink]="['/']">Portal Realponto</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="assets/icons/logo-realponto.svg">
+  </a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,33 +9,55 @@
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Almoço">
         <a class="nav-link" [routerLink]="['/']">
-          <i class="fa fa-fw fa-dashboard"></i>
-          <span class="nav-link-text">Menu</span>
+          <i class="fa fa-fw fa-th-list"></i>
+          <span class="nav-link-text">Dashboard</span>
         </a>
       </li>
 
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Alimentos">
+        <a class="nav-link" [routerLink]="['alimentos/novo']">
+          <i class="fa fa-fw fa-shopping-cart"></i>
+          <span class="nav-link-text">Alimentos</span>
+        </a>
+      </li>
+
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Cardapios">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-wrench"></i>
-          <span class="nav-link-text">Cardápio</span>
+          <i class="fa fa-fw fa-wpforms"></i>
+          <span class="nav-link-text">Cardápios</span>
         </a>
         <ul class="sidenav-second-level collapse" id="collapseComponents">
           <li>
-            <a [routerLink]="['/cardapios/novo']">Novo</a>
+            <a [routerLink]="['/cardapios/novo']">
+              <i class="fa fa-plus"></i> Novo
+            </a>
+          </li>
+
+          <li>
+            <a [routerLink]="['/cardapios/gerenciar']">
+              <i class="fa fa-edit"></i> Gerenciar
+            </a>
           </li>
         </ul>
       </li>
 
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Funcionarios">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAlimentos" data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-wrench"></i>
-          <span class="nav-link-text">Alimento</span>
+          <i class="fa fa-fw fa-user"></i>
+          <span class="nav-link-text">Funcionarios</span>
         </a>
         <ul class="sidenav-second-level collapse" id="collapseAlimentos">
           <li>
-            <a [routerLink]="['alimentos/novo']">Novo</a>
+            <a [routerLink]="['usuarios/novo']">
+              <i class="fa fa-plus"></i> Novo
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['usuarios/gerenciar']">
+              <i class="fa fa-edit"></i> Gerenciar
+            </a>
           </li>
         </ul>
       </li>

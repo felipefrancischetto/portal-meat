@@ -1,9 +1,9 @@
-import { Alimento } from './../../models/models';
 import { Component, OnInit } from '@angular/core';
-
 import 'rxjs/add/operator/filter';
 
 import { CardapioAssociado } from '../../models/models';
+import { Alimento } from './../../models/models';
+
 import { AlmocoService } from '../../provideres/almoco.service';
 
 @Component({
@@ -13,8 +13,8 @@ import { AlmocoService } from '../../provideres/almoco.service';
 })
 export class HomeComponent implements OnInit {
 
-  public hoje = new Date();
   public cardapioAssociado;
+  public hoje = new Date();
 
   constructor(private almocoService: AlmocoService) { }
 
@@ -33,11 +33,11 @@ export class HomeComponent implements OnInit {
   parseCardapio(cardapio) {
     const filterAlimentoByType = tipo => (alimento) => alimento.tipo === tipo;
     const parse = {
-      diaSemana: cardapio.diaSemana,
-      proteinas: cardapio.cardapio.alimentos.filter(filterAlimentoByType('proteína')),
+      diaSemana:       cardapio.diaSemana,
+      proteinas:       cardapio.cardapio.alimentos.filter(filterAlimentoByType('proteína')),
       acompanhamentos: cardapio.cardapio.alimentos.filter(filterAlimentoByType('acompanhamento')),
-      saladas: cardapio.cardapio.alimentos.filter(filterAlimentoByType('salada')),
-      sobremesas: cardapio.cardapio.alimentos.filter(filterAlimentoByType('sobremesa')),
+      saladas:         cardapio.cardapio.alimentos.filter(filterAlimentoByType('salada')),
+      sobremesas:      cardapio.cardapio.alimentos.filter(filterAlimentoByType('sobremesa')),
     };
     return parse;
   }
