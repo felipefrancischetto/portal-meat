@@ -34,7 +34,7 @@
           <div class="scroll list-group">
             <a *ngFor="let proteina of proteinas$ | async" class="list-group-item d-flex justify-content-between">
               {{ proteina?.nome }}
-              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(proteina?.id)">
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(proteina._id)">
                 <i class="fa fa-remove danger"></i>
               </button>
             </a>
@@ -47,7 +47,7 @@
           <div class="scroll list-group">
             <a *ngFor="let acompanhamento of acompanhamentos$ | async" class="list-group-item d-flex justify-content-between">
               {{ acompanhamento?.nome }}
-              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(acompanhamento?.id)">
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(acompanhamento?._id)">
                 <i class="fa fa-remove danger"></i>
               </button>
             </a>
@@ -60,7 +60,7 @@
           <div class="scroll list-group">
             <a *ngFor="let salada of saladas$ | async" class="list-group-item d-flex justify-content-between">
               {{ salada?.nome }}
-              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(salada?.id)">
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(salada?._id)">
                 <i class="fa fa-remove danger"></i>
               </button>
             </a>
@@ -73,7 +73,7 @@
           <div class="scroll list-group">
             <a *ngFor="let sobremesa of sobremesas$ | async" class="list-group-item d-flex justify-content-between">
               {{ sobremesa?.nome }}
-              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(sobremesa?.id)">
+              <button type="button" class="btn btn-danger text-right" (click)="removerAlimento(sobremesa?._id)">
                 <i class="fa fa-remove danger"></i>
               </button>
             </a>
@@ -84,19 +84,3 @@
     </ngb-tabset>
   </div>
 </div>
-
-<ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title">Atenção</h4>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p>Deseja realmente remover o item ?</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="c('Close click')">Sim</button>
-    <button type="button" class="btn btn-danger" (click)="c('Close click')">Não</button>
-  </div>
-</ng-template>

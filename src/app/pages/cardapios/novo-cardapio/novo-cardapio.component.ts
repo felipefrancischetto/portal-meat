@@ -61,7 +61,6 @@ export class NovoCardapioComponent implements OnInit {
     return this.fb.control(null, Validators.required);
   }
 
-
   getAlimentos() {
     const filterAlimentoByType = tipo => (alimento: Alimento) => alimento.tipo === tipo;
     const alimentos$ = this.alimentoService.getAlimentos();
@@ -89,8 +88,11 @@ export class NovoCardapioComponent implements OnInit {
   }
 
   saveCardapio(cardapio: Cardapio) {
-    console.log(this.parseCardapio(cardapio));
-    this.cardapioService.newCardapio(this.parseCardapio(cardapio));
+    const cardapioParse = this.parseCardapio(cardapio);
+    this.cardapioService.newCardapio(cardapioParse)
+      .subscribe(res => {
+        this.cardapioService.getCardapios();
+      });
   }
 
 }

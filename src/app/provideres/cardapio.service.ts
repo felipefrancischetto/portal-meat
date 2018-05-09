@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
 import { Cardapio } from './../models/models';
 
@@ -22,8 +20,8 @@ export class CardapioService {
     return this.http.get<Cardapio[]>(`${API}/cardapios${id}`);
   }
 
-  newCardapio(cardapio: Cardapio): Observable<string> {
-    return this.http.post<any>(`${API}/cardapios`, cardapio);
+  newCardapio(cardapio: Cardapio): Observable<Cardapio> {
+    return this.http.post<Cardapio>(`${API}/cardapios`, cardapio);
   }
 
   removeCardapio(id: string): Observable<Cardapio> {

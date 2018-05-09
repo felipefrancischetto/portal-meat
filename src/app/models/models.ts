@@ -1,41 +1,37 @@
-export interface Funcionario {
-  id: string;
-  name: string;
-  username: string;
-  password: string;
-  tipo: string;
-  historico: string[];
-}
-
 export interface Alimento {
-  id: string;
+  _id: string;
   nome: string;
   tipo: string;
 }
 
 export interface Cardapio {
-  id?: string;
-  nome?: string;
+  _id?: string;
+  nome: string;
   alimentos: Alimento[];
 }
 
 export interface Almoco {
   cardapios_associados: CardapioAssociado[];
-  funcionarios: Funcionario[];
   alteracoes: Alteracao[];
+  cancelamentos: Cancelamento[];
+  data: Date;
 }
 
 export interface Alteracao {
   id: string;
-  funcionario: Funcionario;
-  tipo: string;
-  opcao?: string;
-  data: Date;
+  usuario: Usuario;
+  opcao: string;
+}
+
+export interface Cancelamento {
+  id: string;
+  usuario: Usuario;
+  motivo: string;
 }
 
 export interface CardapioAssociado {
   diaSemana: string;
-  cardapio: Cardapio[];
+  cardapio: Cardapio;
 }
 
 export interface Usuario {
@@ -44,7 +40,7 @@ export interface Usuario {
   email: string;
   username: string;
   password: string;
-  confirmPassword: string;
+  confirmPassword?: string;
   tipo: string;
   estado: string;
 }

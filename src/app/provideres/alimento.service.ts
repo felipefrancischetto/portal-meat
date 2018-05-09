@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
 import { Alimento } from '../models/models';
 
@@ -22,7 +20,7 @@ export class AlimentoService {
     return this.http.get<Alimento>(`${API}/alimentos/${id}`);
   }
 
-  newAlimento(alimento): Observable<Alimento> {
+  newAlimento(alimento: Alimento): Observable<Alimento> {
     return this.http.post<Alimento>(`${API}/alimentos`, alimento);
   }
 
