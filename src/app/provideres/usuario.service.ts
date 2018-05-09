@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
 import { Usuario } from './../models/models';
 
@@ -25,5 +23,8 @@ export class UsuarioService {
     return this.http.post<Usuario>(`${API}/usuarios`, usuario);
   }
 
+  updateUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(`${API}/usuarios/${usuario._id}`, usuario);
+  }
 }
 

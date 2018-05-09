@@ -6,7 +6,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardapioComponent } from './pages/cardapios/cardapio.component';
 import { AlimentosComponent } from './pages/alimentos/alimentos.component';
 import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-cardapio.component';
-import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
 import { HomeUserComponent } from './pages/home-user/home-user.component';
 import { LoginComponent } from './pages/login/login.component';

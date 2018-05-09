@@ -35,7 +35,7 @@ export interface CardapioAssociado {
 }
 
 export interface Usuario {
-  id: string;
+  _id: string;
   nome: string;
   email: string;
   username: string;

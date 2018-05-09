@@ -1,16 +1,19 @@
 <app-breadcrumb title="Gerenciar" titleParent="Funcionarios"></app-breadcrumb>
 
 
-<div class="col-xl-9 col-sm-7 mb-12">
+<div class="col-12">
 
   <ngb-tabset [justify]="'justified'">
     <ngb-tab title="Ativos">
       <ng-template ngbTabContent>
-        <div class="scroll list-group">
+        <div class="pt-4 scroll list-group-item text-center" *ngIf="(usuariosAtivos$ | async)?.length < 1">
+          <p class="text-secondary">Não há funcionário Ativo!</p>
+        </div>
+        <div class="scroll list-group" *ngIf="(usuariosAtivos$ | async)?.length > 0">
           <a *ngFor="let usuario of usuariosAtivos$ | async" class="list-group-item d-flex justify-content-between">
             {{ usuario?.nome }}
-            <button type="button" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
+            <button type="button" class="btn btn-light text-right" (click)="openEditar(usuario)">
+              <i class="fa fa-edit"></i>
             </button>
           </a>
         </div>
@@ -19,16 +22,20 @@
 
     <ngb-tab title="Inativos">
       <ng-template ngbTabContent>
-        <div class="scroll list-group">
-          <a class="list-group-item d-flex justify-content-between">
-            <!-- {{ acompanhamento?.nome }} -->
-            <button type="button" class="btn btn-danger text-right">
-              <i class="fa fa-remove danger"></i>
+        <div class="pt-4 scroll list-group-item text-center" *ngIf="(usuariosInativos$ | async)?.length < 1">
+          <p class="text-secondary">Não há funcionário Inativo!</p>
+        </div>
+        <div class="scroll list-group" *ngIf="(usuariosInativos$ | async)?.length > 0">
+          <a *ngFor="let usuario of usuariosInativos$ | async" class="list-group-item d-flex justify-content-between">
+            {{ usuario?.nome }}
+            <button type="button" class="btn btn-light text-right" (click)="openEditar(usuario)">
+              <i class="fa fa-edit"></i>
             </button>
           </a>
         </div>
       </ng-template>
     </ngb-tab>
+
   </ngb-tabset>
 
 </div>

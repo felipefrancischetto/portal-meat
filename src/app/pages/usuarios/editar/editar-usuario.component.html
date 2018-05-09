@@ -1,0 +1,69 @@
+<div class="modal-header">
+  <h4 class="modal-title">Editar</h4>
+  <button type="button" class="close" aria-label="Close" (click)="close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <div [formGroup]="editarForm">
+    <div class="form-group">
+      <label for="exampleInputName">Nome</label>
+      <input formControlName="nome" class="form-control" type="text">
+    </div>
+
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="exampleInputEmail1">E-mail</label>
+          <input formControlName="email" class="form-control" type="email">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleInputEmail1">Estado</label>
+          <select formControlName="estado" class="form-control">
+            <option value="ATIVO">Ativo</option>
+            <option value="FERIAS">Férias</option>
+            <option value="AFASTADO">Afastado</option>
+            <option value="DESLIGADO">Desligado</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="exampleInputLastName">Usuario</label>
+          <input formControlName="username" class="form-control" type="text">
+        </div>
+
+        <div class="col-md-6">
+          <label for="exampleInputEmail1">Tipo</label>
+          <select formControlName="tipo" class="form-control">
+            <option value="ADMIN">Administrador</option>
+            <option value="USER">Usuário</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col-md-6">
+          <label for="exampleInputPassword1">Senha</label>
+          <input formControlName="password" class="form-control" type="password">
+        </div>
+        <div class="col-md-6">
+          <label for="exampleConfirmPassword">Confirme sua senha</label>
+          <input formControlName="confirmPassword" class="form-control" type="password">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="salvar(editarForm.value)">Salvar</button>
+  <button type="button" class="btn btn-light" (click)="close()">Cancelar</button>
+</div>
+

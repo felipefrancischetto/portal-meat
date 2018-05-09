@@ -20,7 +20,6 @@ import { CardapioService } from './provideres/cardapio.service';
 import { AlimentosComponent } from './pages/alimentos/alimentos.component';
 import { CardapioComponent } from './pages/cardapios/cardapio.component';
 import { NovoCardapioComponent } from './pages/cardapios/novo-cardapio/novo-cardapio.component';
-import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.component';
 import { UsuarioService } from './provideres/usuario.service';
 import { HomeUserComponent } from './pages/home-user/home-user.component';
@@ -29,6 +28,7 @@ import { AlmocoService } from './provideres/almoco.service';
 import { PratoDoDiaComponent } from './pages/home/prato-do-dia/prato-do-dia..component';
 import { GerenciarUsuarioComponent } from './pages/usuarios/gerenciar/gerenciar-usuario.component';
 import { MetricasCardComponent } from './pages/home/metricas-card/metricas-card.component';
+import { EditarUsuarioComponent } from './pages/usuarios/editar/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +41,13 @@ import { MetricasCardComponent } from './pages/home/metricas-card/metricas-card.
     CardapioComponent,
     AlimentosComponent,
     NovoCardapioComponent,
-    UsuariosComponent,
     NovoUsuarioComponent,
+    EditarUsuarioComponent,
     HomeUserComponent,
     GerenciarUsuarioComponent,
+  ],
+  entryComponents: [
+    EditarUsuarioComponent,
   ],
   imports: [
     BrowserModule,

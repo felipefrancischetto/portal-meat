@@ -1,8 +1,10 @@
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Component, OnInit } from '@angular/core';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 
 import { UsuarioService } from '../../../provideres/usuario.service';
 import { Usuario } from '../../../models/models';
+import { EditarUsuarioComponent } from '../editar/editar-usuario.component';
 
 @Component({
   selector: 'app-gerenciar-usuario',
@@ -12,11 +14,20 @@ import { Usuario } from '../../../models/models';
 
 export class GerenciarUsuarioComponent implements OnInit {
 
+  @Output()
+  public editarEvent = new EventEmitter();
+
   public usuariosAtivos$: Observable<Usuario[]>;
   public usuariosInativos$: Observable<Usuario[]>;
+  public usuarioSelecionado: Usuario;
+
+  public optionsModal: NgbModalOptions = {
+    size: 'lg'
+  };
 
   constructor(
     private usuarioService: UsuarioService,
+    private modalService: NgbModal,
   ) { }
 
   ngOnInit() {
@@ -27,10 +38,18 @@ export class GerenciarUsuarioComponent implements OnInit {
     const filtroPorEstado = tipo => (usuario: Usuario) => usuario.estado === tipo;
     const usuarios$ = this.usuarioService.getUsuarios();
     this.usuariosAtivos$ = usuarios$
-      .map(usuario => usuario.filter(filtroPorEstado('ativo')));
+      .map(usuario => usuario.filter(filtroPorEstado('ATIVO')));
     this.usuariosInativos$ = usuarios$
-    .map(usuario => usuario.filter(filtroPorEstado('inativo')));
-}
+      .map(usuario => usuario.filter(filtroPorEstado('INATIVO')));
+  }
+
+  openEditar(usuario: Usuario) {
+    const instance = this.modalService.open(
+      EditarUsuarioComponent,
+      this.optionsModal
+    );
+    instance.componentInstance.usuarioSelecionado = usuario;
+  }
 
 }
 
