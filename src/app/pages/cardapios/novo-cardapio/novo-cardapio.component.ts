@@ -20,12 +20,13 @@ import { TIPO_ALIMENTOS } from './../../../shared/mocks/tipo-alimentos';
 export class NovoCardapioComponent implements OnInit {
 
   @Input()
-  public cardapioForm:     FormGroup;
-  public cardapio:         Cardapio;
-  public proteinas$:       Observable<Alimento[]>;
+  public cardapioForm: FormGroup;
+  public cardapio: Cardapio;
+  public cardapios$: Observable<Cardapio[]>;
+  public proteinas$: Observable<Alimento[]>;
   public acompanhamentos$: Observable<Alimento[]>;
-  public saladas$:         Observable<Alimento[]>;
-  public sobremesas$:      Observable<Alimento[]>;
+  public saladas$: Observable<Alimento[]>;
+  public sobremesas$: Observable<Alimento[]>;
 
   constructor(
     private fb: FormBuilder,
@@ -36,14 +37,15 @@ export class NovoCardapioComponent implements OnInit {
   ngOnInit() {
     this.initForm();
     this.getAlimentos();
+    this.getCardapios();
   }
 
   initForm() {
     this.cardapioForm = this.fb.group({
       acompanhamentos: this.fb.array([this.createAlimento()], Validators.required),
-      proteinas:       this.fb.array([this.createAlimento()], Validators.required),
-      sobremesas:      this.fb.array([this.createAlimento()]),
-      saladas:         this.fb.array([this.createAlimento()]),
+      proteinas: this.fb.array([this.createAlimento()], Validators.required),
+      sobremesas: this.fb.array([this.createAlimento()]),
+      saladas: this.fb.array([this.createAlimento()]),
     });
   }
 
@@ -74,6 +76,10 @@ export class NovoCardapioComponent implements OnInit {
       .map(alimentos => alimentos.filter(filterAlimentoByType('sobremesa')));
   }
 
+  getCardapios() {
+    this.cardapios$ = this.cardapioService.getCardapios();
+  }
+
   parseCardapio(cardapio) {
     const cardapios = {
       nome: cardapio.proteinas[0].nome,
@@ -93,6 +99,7 @@ export class NovoCardapioComponent implements OnInit {
       .subscribe(res => {
         this.cardapioService.getCardapios();
       });
+    this.getCardapios();
   }
 
 }

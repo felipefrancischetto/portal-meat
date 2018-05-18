@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/filter';
 
-import { CardapioAssociado } from '../../models/models';
 import { Alimento } from './../../models/models';
 
 import { AlmocoService } from '../../provideres/almoco.service';

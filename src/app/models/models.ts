@@ -11,26 +11,28 @@ export interface Cardapio {
 }
 
 export interface Almoco {
-  cardapios_associados: CardapioAssociado[];
+  _id: string;
+  cardapio_agendado: Agenda;
   alteracoes: Alteracao[];
   cancelamentos: Cancelamento[];
   data: Date;
 }
 
 export interface Alteracao {
-  id: string;
+  _id: string;
   usuario: Usuario;
   opcao: string;
 }
 
 export interface Cancelamento {
-  id: string;
+  _id: string;
   usuario: Usuario;
   motivo: string;
 }
 
-export interface CardapioAssociado {
-  diaSemana: string;
+export interface Agenda {
+  _id: number;
+  diaDaSemana: string;
   cardapio: Cardapio;
 }
 

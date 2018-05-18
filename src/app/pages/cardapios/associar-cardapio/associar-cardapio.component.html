@@ -1,0 +1,18 @@
+<div class="row">
+
+  <div class="col-7">
+    <div class="list-group scrollbar m-3" id="style-1" *ngIf="(cardapios$ | async)?.length > 0">
+      <h4 class="modal-title">Associar Cardápio</h4>
+      <a class="list-group-item list-group-item-action" *ngFor="let cardapio of cardapios$ | async">
+        {{ cardapio?.nome }}
+      </a>
+    </div>
+  </div>
+
+  <div class="col-5 p-2 background">
+    <h3>{{ diaSelecionado.diaDaSemana }}</h3>
+    <hr>
+
+  </div>
+
+</div>

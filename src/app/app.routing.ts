@@ -10,11 +10,13 @@ import { NovoUsuarioComponent } from './pages/usuarios/novo/novo-usuario.compone
 import { HomeUserComponent } from './pages/home-user/home-user.component';
 import { LoginComponent } from './pages/login/login.component';
 import { GerenciarUsuarioComponent } from './pages/usuarios/gerenciar/gerenciar-usuario.component';
+import { GerenciarCardapioComponent } from './pages/cardapios/gerenciar-cardapio/gerenciar-cardapio.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent  },
   { path: 'cardapios', component: CardapioComponent },
   { path: 'cardapios/novo', component: NovoCardapioComponent },
+  { path: 'cardapios/gerenciar', component: GerenciarCardapioComponent },
   { path: 'alimentos', component: AlimentosComponent },
   { path: 'alimentos/novo', component: AlimentosComponent },
   { path: 'usuarios/novo', component: NovoUsuarioComponent },

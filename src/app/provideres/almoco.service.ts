@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { CardapioAssociado, Almoco, Alteracao } from './../models/models';
+import { Cardapio , Almoco, Alteracao } from './../models/models';
 
 import { API } from './../app.api';
 import { ErrorHandler } from './../app.error-hander';
@@ -18,12 +18,12 @@ export class AlmocoService {
     return this.http.get<Almoco[]>(`${API}/almocos`);
   }
 
-  getCardapiosAssociados(): Observable<CardapioAssociado[]> {
-    return this.http.get<CardapioAssociado[]>(`${API}/cardapiosAssociados`);
+  getCardapiosAssociados(): Observable<Cardapio[]> {
+    return this.http.get<Cardapio[]>(`${API}/cardapiosAssociados`);
   }
 
-  getCardapioDoDia(id: string): Observable<CardapioAssociado> {
-    return this.http.get<CardapioAssociado>(`${API}/cardapiosAssociados/${id}`);
+  getCardapioDoDia(id: string): Observable<Cardapio> {
+    return this.http.get<Cardapio>(`${API}/cardapiosAssociados/${id}`);
   }
 
   getAlteracoes(): Observable<Alteracao[]> {

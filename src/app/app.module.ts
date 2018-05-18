@@ -29,6 +29,9 @@ import { PratoDoDiaComponent } from './pages/home/prato-do-dia/prato-do-dia..com
 import { GerenciarUsuarioComponent } from './pages/usuarios/gerenciar/gerenciar-usuario.component';
 import { MetricasCardComponent } from './pages/home/metricas-card/metricas-card.component';
 import { EditarUsuarioComponent } from './pages/usuarios/editar/editar-usuario.component';
+import { GerenciarCardapioComponent } from './pages/cardapios/gerenciar-cardapio/gerenciar-cardapio.component';
+import { AgendaService } from './provideres/agenda.service';
+import { AssociarCardapioComponent } from './pages/cardapios/associar-cardapio/associar-cardapio.component';
 
 @NgModule({
   declarations: [
@@ -45,9 +48,12 @@ import { EditarUsuarioComponent } from './pages/usuarios/editar/editar-usuario.c
     EditarUsuarioComponent,
     HomeUserComponent,
     GerenciarUsuarioComponent,
+    GerenciarCardapioComponent,
+    AssociarCardapioComponent,
   ],
   entryComponents: [
     EditarUsuarioComponent,
+    AssociarCardapioComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +70,7 @@ import { EditarUsuarioComponent } from './pages/usuarios/editar/editar-usuario.c
     UsuarioService,
     AuthService,
     AlmocoService,
+    AgendaService
   ],
   bootstrap: [AppComponent]
 })
