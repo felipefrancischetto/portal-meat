@@ -1,10 +1,13 @@
-import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
+
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { UsuarioService } from '../../../provideres/usuario.service';
 import { AlmocoService } from '../../../provideres/almoco.service';
 
 import { Usuario, Alteracao } from '../../../models/models';
+
 
 @Component({
   selector: 'app-metricas-card',
@@ -39,8 +42,7 @@ export class MetricasCardComponent implements OnInit {
 
   getFuncionariosAtivos(): void {
     const filtroPorEstado = tipo => (usuario: Usuario) => usuario.estado === tipo;
-    this.funcioariosAtivos$ = this.funcionarios$
-      .map(usuario => usuario.filter(filtroPorEstado('ativo')));
+    this.funcioariosAtivos$ = this.funcionarios$.pipe(map(usuario => usuario.filter(filtroPorEstado('ativo'))));
   }
 
   getAlteracoes() {
@@ -54,12 +56,9 @@ export class MetricasCardComponent implements OnInit {
 
   getAlteracoesPorTipo(): void {
     const filtroPorTipo = opcao => (alteracao: Alteracao) => alteracao.opcao === opcao;
-    this.outraProteina$ = this.alteracoes$
-      .map(alteracao => alteracao.filter(filtroPorTipo('outra proteína')));
-    this.semProteina$ =  this.alteracoes$
-      .map(alteracao => alteracao.filter(filtroPorTipo('sem proteína')));
-    this.naoAlmocaram$ = this.alteracoes$
-      .map(alteracao => alteracao.filter(filtroPorTipo('não almoçaram')));
+    this.outraProteina$ = this.alteracoes$.pipe(map(alteracao => alteracao.filter(filtroPorTipo('outra proteína'))));
+    this.semProteina$ =  this.alteracoes$.pipe(map(alteracao => alteracao.filter(filtroPorTipo('sem proteína'))));
+    this.naoAlmocaram$ = this.alteracoes$.pipe(map(alteracao => alteracao.filter(filtroPorTipo('não almoçaram'))));
   }
 
 }

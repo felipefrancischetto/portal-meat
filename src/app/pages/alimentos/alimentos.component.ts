@@ -1,7 +1,8 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { map } from 'rxjs/operators';
 
 import { TIPO_ALIMENTOS } from './../../shared/mocks/tipo-alimentos';
 
@@ -51,28 +52,22 @@ export class AlimentosComponent implements OnInit {
       });
   }
 
-  removerAlimento(id) {
+  removerAlimento(id: string) {
     this.alimentoSevice.removeAlimento(id)
-    .subscribe(res => {
-      this.getAlimentos();
-    });
+    .subscribe(() => this.getAlimentos());
   }
 
-  alertConfirm(content) {
+  alertConfirm(content: any) {
     this.modalService.open(content, { size: 'sm' });
   }
 
   getAlimentos() {
-    const filterAlimentoByType = tipo => (alimento: Alimento) => alimento.tipo === tipo;
+    const filterAlimentoByType = (tipo: string) => (alimento: Alimento) => alimento.tipo === tipo;
     const alimentos$ = this.alimentoSevice.getAlimentos();
-    this.proteinas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('proteína')));
-    this.acompanhamentos$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('acompanhamento')));
-    this.saladas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('salada')));
-    this.sobremesas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('sobremesa')));
+    this.proteinas$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('proteína'))));
+    this.acompanhamentos$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('acompanhamento'))));
+    this.saladas$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('salada'))));
+    this.sobremesas$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('sobremesa'))));
   }
 }
 

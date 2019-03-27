@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/filter';
+
 
 import { Alimento } from './../../models/models';
 

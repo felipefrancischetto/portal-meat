@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl, FormArray } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Cardapio } from './../../../models/models';
 import { Alimento } from '../../../models/models';
@@ -64,16 +64,12 @@ export class NovoCardapioComponent implements OnInit {
   }
 
   getAlimentos() {
-    const filterAlimentoByType = tipo => (alimento: Alimento) => alimento.tipo === tipo;
+    const filterAlimentoByType = (tipo: string) => (alimento: Alimento) => alimento.tipo === tipo;
     const alimentos$ = this.alimentoService.getAlimentos();
-    this.proteinas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('proteína')));
-    this.acompanhamentos$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('acompanhamento')));
-    this.saladas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('salada')));
-    this.sobremesas$ = alimentos$
-      .map(alimentos => alimentos.filter(filterAlimentoByType('sobremesa')));
+    this.proteinas$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('proteína'))));
+    this.acompanhamentos$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('acompanhamento'))));
+    this.saladas$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('salada'))));
+    this.sobremesas$ = alimentos$.pipe(map(alimentos => alimentos.filter(filterAlimentoByType('sobremesa'))));
   }
 
   getCardapios() {
@@ -95,10 +91,7 @@ export class NovoCardapioComponent implements OnInit {
 
   saveCardapio(cardapio: Cardapio) {
     const cardapioParse = this.parseCardapio(cardapio);
-    this.cardapioService.newCardapio(cardapioParse)
-      .subscribe(res => {
-        this.cardapioService.getCardapios();
-      });
+    this.cardapioService.newCardapio(cardapioParse).subscribe(() => this.cardapioService.getCardapios());
     this.getCardapios();
   }
 

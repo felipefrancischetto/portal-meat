@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { UsuarioService } from '../../../provideres/usuario.service';
 import { Usuario } from '../../../models/models';
 import { EditarUsuarioComponent } from '../editar/editar-usuario.component';
@@ -37,10 +37,8 @@ export class GerenciarUsuarioComponent implements OnInit {
   getUsuarios() {
     const filtroPorEstado = tipo => (usuario: Usuario) => usuario.estado === tipo;
     const usuarios$ = this.usuarioService.getUsuarios();
-    this.usuariosAtivos$ = usuarios$
-      .map(usuario => usuario.filter(filtroPorEstado('ATIVO')));
-    this.usuariosInativos$ = usuarios$
-      .map(usuario => usuario.filter(filtroPorEstado('INATIVO')));
+    this.usuariosAtivos$ = usuarios$.pipe(map(usuario => usuario.filter(filtroPorEstado('ATIVO'))));
+    this.usuariosInativos$ = usuarios$.pipe(map(usuario => usuario.filter(filtroPorEstado('INATIVO'))));
   }
 
   openEditar(usuario: Usuario) {
