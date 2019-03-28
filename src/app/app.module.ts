@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,6 +32,7 @@ import { EditarUsuarioComponent } from './pages/usuarios/editar/editar-usuario.c
 import { GerenciarCardapioComponent } from './pages/cardapios/gerenciar-cardapio/gerenciar-cardapio.component';
 import { AgendaService } from './provideres/agenda.service';
 import { AssociarCardapioComponent } from './pages/cardapios/associar-cardapio/associar-cardapio.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { AssociarCardapioComponent } from './pages/cardapios/associar-cardapio/a
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
-    NgbModule.forRoot(),
+    NgbModule,
     RouterModule.forRoot(ROUTES),
   ],
   providers: [
@@ -70,7 +71,11 @@ import { AssociarCardapioComponent } from './pages/cardapios/associar-cardapio/a
     UsuarioService,
     AuthService,
     AlmocoService,
-    AgendaService
+    AgendaService,
+    {
+      provide: APP_BASE_HREF,
+      useValue : '/'
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -41,7 +41,7 @@ export class GerenciarUsuarioComponent implements OnInit {
     this.usuariosInativos$ = usuarios$.pipe(map(usuario => usuario.filter(filtroPorEstado('INATIVO'))));
   }
 
-  openEditar(usuario: Usuario) {
+  openEditar(usuario) {
     const instance = this.modalService.open(
       EditarUsuarioComponent,
       this.optionsModal

@@ -49,12 +49,12 @@ export class NovoCardapioComponent implements OnInit {
     });
   }
 
-  addAlimento(tipo: string): void {
+  addAlimento(tipo): void {
     const formArray = this.cardapioForm.get(tipo) as FormArray;
     formArray.push(this.createAlimento());
   }
 
-  removeAlimento(tipo: string, index: number): void {
+  removeAlimento(tipo, index): void {
     const formArray = this.cardapioForm.get(tipo) as FormArray;
     formArray.removeAt(index);
   }
@@ -89,7 +89,7 @@ export class NovoCardapioComponent implements OnInit {
     return cardapios;
   }
 
-  saveCardapio(cardapio: Cardapio) {
+  saveCardapio(cardapio) {
     const cardapioParse = this.parseCardapio(cardapio);
     this.cardapioService.newCardapio(cardapioParse).subscribe(() => this.cardapioService.getCardapios());
     this.getCardapios();
