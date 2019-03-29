@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 
@@ -33,6 +35,8 @@ import { GerenciarCardapioComponent } from './pages/cardapios/gerenciar-cardapio
 import { AgendaService } from './provideres/agenda.service';
 import { AssociarCardapioComponent } from './pages/cardapios/associar-cardapio/associar-cardapio.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,10 @@ import { APP_BASE_HREF } from '@angular/common';
     ReactiveFormsModule,
     SharedModule,
     NgbModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(ROUTES),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     AlimentoService,
